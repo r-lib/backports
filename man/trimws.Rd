@@ -6,4 +6,12 @@
 \usage{
 trimws(x, which = c("both", "left", "right"))
 }
+\arguments{
+\item{x}{See description.}
+
+\item{which}{See description.}
+}
+\description{
+See the original description in \code{\link[base]{trimws}}.
+}
 

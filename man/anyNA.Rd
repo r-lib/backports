@@ -6,4 +6,12 @@
 \usage{
 anyNA()
 }
+\arguments{
+\item{x}{See description.}
+
+\item{recursive}{See description.}
+}
+\description{
+See the original description in \code{\link[base]{anyNA}}.
+}
 

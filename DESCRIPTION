@@ -4,12 +4,15 @@ Title: Some backports of functions introduced since R-3.0.0
 Version: 1.0
 Author: Michel Lang <michellang@gmail.com>
 Maintainer: Michel Lang <michellang@gmail.com>
-Description: More about what it does (maybe more than one line)
+Description: This package provides functions which have been introduced in one
+    of the base packages in R version 3.0.1 or later. On package load, the
+    respective backported functions will be replaced with the "official"
+    versions where applicable in a binary-safe way.
 License: GPL-2
 NeedsCompilation: no
 ByteCompile: yes
 Depends:
-    R (>= 3.0.0),
+    R (>= 3.0.0)
 Suggests:
     testthat
 RoxygenNote: 5.0.1

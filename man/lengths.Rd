@@ -6,4 +6,12 @@
 \usage{
 lengths(x, use.names = TRUE)
 }
+\arguments{
+\item{x}{See description.}
+
+\item{use.names}{See description.}
+}
+\description{
+See the original description in \code{\link[base]{trimws}}.
+}
 

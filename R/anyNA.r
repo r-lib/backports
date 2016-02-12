@@ -1,12 +1,17 @@
 #' @title Backport of anyNA
+#'
+#' @description
+#' See the original description in \code{\link[base]{anyNA}}.
+#'
+#' @param x
+#'  See description.
+#' @param recursive
+#'  See description.
 #' @export
-anyNA = function(x, recursive = FALSE) {
-  if (recursive && (is.list(x) || is.pairlist(x))) {
+anyNA = NULL
+
+anyNA_backport = function(x, recursive = FALSE) {
+  if (isTRUE(recursive) && (is.list(x) || is.pairlist(x)))
     return(any(rapply(x, anyNA, how = "unlist", recursive = FALSE)))
-  }
   any(is.na(x))
 }
-# x = list(1, 2, list(3, 4, list(NA)))
-# recursive = TRUE
-# anyNA(x, recursive = recursive)
-# anyNA2(x, recursive = recursive)

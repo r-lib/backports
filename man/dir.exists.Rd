@@ -6,4 +6,10 @@
 \usage{
 dir.exists(paths)
 }
+\arguments{
+\item{paths}{See description.}
+}
+\description{
+See the original description in \code{\link[base]{dir.exists}}.
+}
 
