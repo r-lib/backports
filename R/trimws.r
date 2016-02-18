@@ -9,8 +9,7 @@
 #' @param which
 #'  See description.
 #' @rawNamespace if (getRversion() < "3.2.0") export(trimws)
-#' @importFrom stringi stri_trim
 trimws = function(x, which = c("both", "left", "right")) {
   which = match.arg(which)
-  stri_trim(x, side = which)
+  stringi::stri_trim(x, side = which)
 }
