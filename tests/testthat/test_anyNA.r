@@ -1,7 +1,7 @@
 context("anyNA()")
 
 test_that("anyNA()", {
-  if (!exists("anyNA", envir = baseenv()))
+  if (!exists("anyNA", envir = baseenv()) || getRversion() < "3.2.0")
     skip("anyNA() not found in base")
   f = get("anyNA", envir = baseenv())
   expect_same = makeCompareFun(f, anyNA)
