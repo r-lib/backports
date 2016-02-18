@@ -1,12 +1,10 @@
 context("anyNA()")
 
 test_that("anyNA()", {
-  ee = as.environment("package:base")
-  if (!exists("anyNA", envir = ee))
+  if (!exists("anyNA", envir = baseenv()))
     skip("anyNA() not found in base")
-  f = get("anyNA", envir = ee)
-
-  expect_same = makeCompareFun(f, anyNA_backport)
+  f = get("anyNA", envir = baseenv())
+  expect_same = makeCompareFun(f, anyNA)
 
   expect_same(1)
   expect_same(NA)

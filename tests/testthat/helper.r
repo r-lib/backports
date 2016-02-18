@@ -1,3 +1,8 @@
+skip_if_version_lt = function(v) {
+  if (getRversion() < v)
+    skip("Insufficient R version")
+}
+
 makeCompareFun = function(f1, f2, ...) {
   f1 = match.fun(f1)
   f2 = match.fun(f2)

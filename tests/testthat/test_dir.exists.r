@@ -1,12 +1,10 @@
 context("dir.exists()")
 
 test_that("dir.exists()", {
-  ee = as.environment("package:base")
-  if (!exists("dir.exists", envir = ee))
+  if (!exists("dir.exists", envir = baseenv()))
     skip("dir.exists() not found in base")
-  f = get("dir.exists", envir = ee)
-
-  expect_same = makeCompareFun(f, dir.exists_backport)
+  f = get("dir.exists", envir = baseenv())
+  expect_same = makeCompareFun(f, dir.exists)
 
   expect_same(tempdir())
   expect_same(tempfile())

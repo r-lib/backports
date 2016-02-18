@@ -1,12 +1,10 @@
 context("trimws()")
 
 test_that("trimws()", {
-  ee = as.environment("package:base")
-  if (!exists("trimws", envir = ee))
+  if (!exists("trimws", envir = baseenv()))
     skip("trimws() not found in base")
-  f = get("trimws", envir = ee)
-
-  expect_same = makeCompareFun(f, trimws_backport)
+  f = get("trimws", envir = baseenv())
+  expect_same = makeCompareFun(f, trimws)
 
   expect_same("")
   expect_same(NA)
