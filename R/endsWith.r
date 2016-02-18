@@ -10,5 +10,7 @@
 #'  See description.
 #' @rawNamespace if (getRversion() < "3.3.0") export(endsWith)
 endsWith = function(x, suffix) {
+  if (!nzchar(suffix))
+    return(rep_len(TRUE, length(x)))
   stringi::stri_endswith_fixed(x, suffix)
 }
