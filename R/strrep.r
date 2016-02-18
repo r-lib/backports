@@ -2,7 +2,7 @@
 #' @rdname strrep
 #'
 #' @description
-#' See the original description in \code{\link[base]{strrep}}.
+#' See the original description in \code{base::strrep}.
 #'
 #' @param x
 #'  See description.

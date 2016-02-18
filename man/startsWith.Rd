@@ -12,6 +12,6 @@ startsWith(x, prefix)
 \item{prefix}{See description.}
 }
 \description{
-See the original description in \code{\link[base]{startsWith}}.
+See the original description in \code{base::startsWith}.
 }
 

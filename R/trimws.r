@@ -2,7 +2,7 @@
 #' @rdname trimws
 #'
 #' @description
-#' See the original description in \code{\link[base]{trimws}}.
+#' See the original description in \code{base::trimws}.
 #'
 #' @param x
 #'  See description.

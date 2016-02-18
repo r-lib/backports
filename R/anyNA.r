@@ -2,7 +2,7 @@
 #' @rdname anyNA
 #'
 #' @description
-#' See the original description in \code{\link[base]{anyNA}}.
+#' See the original description in \code{base::anyNA}.
 #'
 #' @param x
 #'  See description.

@@ -12,6 +12,6 @@ trimws(x, which = c("both", "left", "right"))
 \item{which}{See description.}
 }
 \description{
-See the original description in \code{\link[base]{trimws}}.
+See the original description in \code{base::trimws}.
 }
 

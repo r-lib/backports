@@ -12,6 +12,6 @@ endsWith(x, suffix)
 \item{suffix}{See description.}
 }
 \description{
-See the original description in \code{\link[base]{endsWith}}.
+See the original description in \code{base::endsWith}.
 }
 

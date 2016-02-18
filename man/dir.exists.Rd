@@ -10,6 +10,6 @@ dir.exists(paths)
 \item{paths}{See description.}
 }
 \description{
-See the original description in \code{\link[base]{dir.exists}}.
+See the original description in \code{base::dir.exists}.
 }
 

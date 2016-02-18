@@ -12,6 +12,6 @@ anyNA(x, recursive = FALSE)
 \item{recursive}{See description.}
 }
 \description{
-See the original description in \code{\link[base]{anyNA}}.
+See the original description in \code{base::anyNA}.
 }
 

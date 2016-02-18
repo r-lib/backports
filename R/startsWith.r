@@ -2,7 +2,7 @@
 #' @rdname startsWith
 #'
 #' @description
-#' See the original description in \code{\link[base]{startsWith}}.
+#' See the original description in \code{base::startsWith}.
 #'
 #' @param x
 #'  See description.

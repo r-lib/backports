@@ -12,6 +12,6 @@ strrep(x, times)
 \item{times}{See description.}
 }
 \description{
-See the original description in \code{\link[base]{strrep}}.
+See the original description in \code{base::strrep}.
 }
 

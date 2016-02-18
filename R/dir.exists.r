@@ -2,7 +2,7 @@
 #' @rdname dir.exists
 #'
 #' @description
-#' See the original description in \code{\link[base]{dir.exists}}.
+#' See the original description in \code{base::dir.exists}.
 #'
 #' @param paths
 #'  See description.
