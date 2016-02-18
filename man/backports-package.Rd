@@ -4,7 +4,7 @@
 \name{backports-package}
 \alias{backports}
 \alias{backports-package}
-\title{Some backports of functions introduced since R-3.0.0}
+\title{Backports of Functions Introduced Since R-3.0.0}
 \description{
 This package provides backports of functions which have been introduced in one of the base packages in R version 3.0.1 or later.
 These backports are conditionally exported in order to let R resolve the function name to either the implemented backport, or the respective base version, if available.
