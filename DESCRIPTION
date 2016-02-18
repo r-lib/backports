@@ -1,15 +1,16 @@
 Package: backports
 Type: Package
-Title: Backports of Functions Introduced Since R-3.0.0
+Title: Reimplementations of Functions Introduced Since R-3.0.0
 Version: 1.0.0
 Author: Michel Lang <michellang@gmail.com>
 Maintainer: Michel Lang <michellang@gmail.com>
-Description: This package provides backports of functions which have been
-    introduced in one of the base packages in R version 3.0.1 or later. These
-    backports are conditionally exported in order to let R resolve the function
-    name to either the implemented backport, or the respective base version, if
-    available. This way, package developers can make use of the new, optimized
-    functions without without worrying about the minimum R version required.
+Description: Provides implementations of functions which have been
+    introduced in one of the R's base packages since version 3.0.0. These
+    backports are conditionally exported which results in R resolving the
+    function names to the version shipped with R (if available), or the
+    implemented backport as fallback. This way package developers can make use
+    of the new, optimized functions without without worrying about the minimum R
+    version required.
 License: GPL-2
 NeedsCompilation: no
 ByteCompile: yes
