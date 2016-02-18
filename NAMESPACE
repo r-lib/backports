@@ -3,4 +3,8 @@
 if (getRversion() < "3.2.0") export(anyNA)
 if (getRversion() < "3.2.0") export(dir.exists)
 if (getRversion() < "3.2.0") export(trimws)
+if (getRversion() < "3.3.0") export(endsWith)
 if (getRversion() < "3.3.0") export(lengths)
+if (getRversion() < "3.3.0") export(startsWith)
+if (getRversion() < "3.3.0") export(strrep)
+importFrom(stringi,stri_trim)
