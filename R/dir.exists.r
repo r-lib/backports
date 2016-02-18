@@ -1,14 +1,13 @@
 #' @title Backport of lengths
+#' @rdname dir.exists
 #'
 #' @description
 #' See the original description in \code{\link[base]{dir.exists}}.
 #'
 #' @param paths
 #'  See description.
-#' @export
-dir.exists = NULL
-
-dir.exists_backport = function(paths) {
+#' @rawNamespace if (getRversion() < "3.2.0") export(dir.exists)
+dir.exists = function(paths) {
   x = file.info(paths)$isdir
   !is.na(x) & x
 }

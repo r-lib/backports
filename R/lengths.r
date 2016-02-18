@@ -1,4 +1,5 @@
 #' @title Backport of lengths
+#' @rdname lengths
 #'
 #' @description
 #' See the original description in \code{\link[base]{trimws}}.
@@ -7,9 +8,7 @@
 #'  See description.
 #' @param use.names
 #'  See description.
-#' @export
-lengths = NULL
-
-lengths_backport = function(x, use.names = TRUE) {
+#' @rawNamespace if (getRversion() < "3.3.0") export(lengths)
+lengths = function(x, use.names = TRUE) {
   vapply(x, length, FUN.VALUE = NA_integer_, USE.NAMES = use.names)
 }

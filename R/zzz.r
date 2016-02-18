@@ -1,18 +1,4 @@
-.onLoad = function(libname, pkgname) {
-  r.version = getRversion()
-  if (r.version > "3.2.0") {
-    dir.exists <<- base::dir.exists
-    trimws <<- base::trimws
-    anyNA <<- base::anyNA
-  } else {
-    dir.exists <<- dir.exists_backport
-    trimws <<- trimws_backport
-    anyNA <<- anyNA_backport
-  }
-
-  if (r.version > "3.2.1") {
-    lengths <<- base::lengths
-  } else {
-    lengths <<- lengths_backport
-  }
-}
+#' This package provides functions which have been introduced in one of the base packages in R version 3.0.1 or later.
+#' These backports are conditionally exported in order to let R resolve the function name to the implemented backport only if the respective base version is not available.
+#' As a package developer, you can just import \code{backports} to use all implemented backports without worrying about the required R version.
+"_PACKAGE"

@@ -4,7 +4,7 @@
 \alias{anyNA}
 \title{Backport of anyNA}
 \usage{
-anyNA()
+anyNA(x, recursive = FALSE)
 }
 \arguments{
 \item{x}{See description.}
