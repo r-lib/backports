@@ -1,6 +1,40 @@
 context("startsWith/endsWith")
 
-test_that("startsWith/endsWith", {
+test_that("startsWith", {
+  if (!exists("startsWith", envir = baseenv()))
+    skip("startsWith() not found in base")
+  f = get("startsWith", envir = baseenv())
+  expect_same = makeCompareFun(f, startsWith)
+
+  expect_same("a", "a")
+  expect_same(NA, "a")
+  expect_same("a", NA)
+  expect_same("a", "")
+  expect_same("", "a")
+  expect_same("", "")
+  expect_same(c("a", NA, "b"), "b")
+  expect_same("b", c("a", NA, "b"))
+  expect_same(letters, c("m", NA, ""))
+})
+
+test_that("endsWith", {
+  if (!exists("endsWith", envir = baseenv()))
+    skip("endsWith() not found in base")
+  f = get("endsWith", envir = baseenv())
+  expect_same = makeCompareFun(f, endsWith)
+
+  expect_same("a", "a")
+  expect_same(NA, "a")
+  expect_same("a", NA)
+  expect_same("a", "")
+  expect_same("", "a")
+  expect_same("", "")
+  expect_same(c("a", NA, "b"), "b")
+  expect_same("b", c("a", NA, "b"))
+  expect_same(letters, c("m", NA, ""))
+})
+
+test_that("startsWith/endsWith tests from base", {
   # adapted from R's unit tests
   t1 = c("Foobar", "bla bla", "something", "another", "blu", "brown", "blau blüht der Enzian")
   t2 = c("some text", "any text")
