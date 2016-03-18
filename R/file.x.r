@@ -7,12 +7,12 @@
 #' @param ...
 #'  See description.
 #' @rawNamespace if (getRversion() < "3.2.0") export(file.size)
-file.size = function(...) file.info(..., extra_cols = FALSE)$size
+file.size = function(...) file.info(...)$size
 
 #' @rdname file.size
 #' @rawNamespace if (getRversion() < "3.2.0") export(file.mode)
-file.mode = function(...) file.info(..., extra_cols = FALSE)$mode
+file.mode = function(...) file.info(...)$mode
 
 #' @rdname file.size
 #' @rawNamespace if (getRversion() < "3.2.0") export(file.mtime)
-file.mtime = function(...) file.info(..., extra_cols = FALSE)$mtime
+file.mtime = function(...) file.info(...)$mtime
