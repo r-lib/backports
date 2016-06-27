@@ -11,5 +11,9 @@
 #' @rawNamespace if (getRversion() < "3.2.0") export(trimws)
 trimws = function(x, which = c("both", "left", "right")) {
   which = match.arg(which)
-  stringi::stri_trim(x, side = which)
+  if (which %in% c("left", "both"))
+    x = gsub("^[[:space:]]", "", x)
+  if (which %in% c("right", "both"))
+    x = gsub("[[:space:]]$", "", x)
+  return(x)
 }

@@ -12,9 +12,6 @@
 endsWith = function(x, suffix) {
   if (!is.character(x) || !is.character(suffix))
     stop("non-character object(s)")
-  i = !nzchar(suffix)
-  suffix[i] = NA_character_
-  res = suppressWarnings(stringi::stri_endswith_fixed(x, suffix))
-  res[i] = TRUE
-  return(res)
+  n = nchar(x)
+  suppressWarnings(substr(x, n - nchar(suffix) + 1L, n) == suffix)
 }

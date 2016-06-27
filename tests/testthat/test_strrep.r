@@ -38,6 +38,5 @@ test_that("strrep", {
   expect_same(TRUE, 2)
   expect_same(TRUE, 1:2)
   expect_same("a", NA)
-  # bug in r-devel (uwe reported this to kurt)
-  # expect_same("a", c(1, NA, 2))
+  expect_same("a", c(1, NA, 2))
 })

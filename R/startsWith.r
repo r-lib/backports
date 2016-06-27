@@ -12,9 +12,5 @@
 startsWith = function(x, prefix) {
   if (!is.character(x) || !is.character(prefix))
     stop("non-character object(s)")
-  i = !nzchar(prefix)
-  prefix[i] = NA_character_
-  res = suppressWarnings(stringi::stri_startswith_fixed(x, prefix))
-  res[i] = TRUE
-  return(res)
+  suppressWarnings(substr(x, 1L, nchar(prefix)) == prefix)
 }
