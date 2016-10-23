@@ -2,7 +2,7 @@
 % Please edit documentation in R/dir.exists.R
 \name{dir.exists}
 \alias{dir.exists}
-\title{Backport of lengths}
+\title{Backport of dir.exists}
 \usage{
 dir.exists(paths)
 }
