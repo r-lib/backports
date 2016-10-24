@@ -1,4 +1,4 @@
-#' @title Backport of lengths
+#' @title Backport of dir.exists
 #' @rdname dir.exists
 #'
 #' @description
