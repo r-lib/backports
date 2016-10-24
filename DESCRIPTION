@@ -18,5 +18,6 @@ ByteCompile: yes
 Depends:
     R (>= 3.0.0)
 Suggests:
+    checkmate,
     testthat
 RoxygenNote: 5.0.1

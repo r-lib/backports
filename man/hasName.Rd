@@ -9,7 +9,7 @@ hasName(x, name)
 \arguments{
 \item{x}{See description.}
 
-\item{name.}{See description.}
+\item{name}{See description.}
 }
 \description{
 See the original description in \code{utils::hasName}.

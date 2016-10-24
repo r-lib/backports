@@ -6,7 +6,7 @@
 #'
 #' @param x
 #'  See description.
-#' @param name.
+#' @param name
 #'  See description.
 #' @rawNamespace if (getRversion() < "3.4.0") export(hasName)
 hasName = function(x, name) {

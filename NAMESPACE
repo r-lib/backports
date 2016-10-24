@@ -2,6 +2,7 @@
 
 if (getRversion() < "3.2.0") export(anyNA)
 if (getRversion() < "3.2.0") export(dir.exists)
+if (getRversion() < "3.2.0") export(file.info)
 if (getRversion() < "3.2.0") export(file.mode)
 if (getRversion() < "3.2.0") export(file.mtime)
 if (getRversion() < "3.2.0") export(file.size)

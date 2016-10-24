@@ -1,6 +1,7 @@
 # backports 1.0.4
 
 * Added `hasName()` for R versions prior to 3.4.0
+* Added `file.info()` with backport for argument `extra_cols`.
 
 # backports 1.0.3
 

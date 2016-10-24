@@ -8,6 +8,6 @@
 #'  See description.
 #' @rawNamespace if (getRversion() < "3.2.0") export(dir.exists)
 dir.exists = function(paths) {
-  x = file.info(paths)$isdir
+  x = base::file.info(paths)$isdir
   !is.na(x) & x
 }

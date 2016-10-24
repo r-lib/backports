@@ -1,3 +1,5 @@
+library(checkmate)
+
 skip_if_version_lt = function(v) {
   if (getRversion() < v)
     skip("Insufficient R version")
