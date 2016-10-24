@@ -1,10 +1,8 @@
-context("trimws()")
+source("helper/helper.R")
 
-test_that("trimws()", {
-  if (!exists("trimws", envir = baseenv()))
-    skip("trimws() not found in base")
+if (exists("trimws", envir = baseenv())) {
   f = get("trimws", envir = baseenv())
-  expect_same = makeCompareFun(f, trimws)
+  expect_same = makeCompareFun(f, backports:::trimws)
 
   expect_same("")
   expect_same(NA)
@@ -15,4 +13,4 @@ test_that("trimws()", {
   expect_same(" x ", which = "left")
   expect_same(" x ", which = "right")
   expect_same(1)
-})
+}

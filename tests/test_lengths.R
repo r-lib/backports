@@ -1,13 +1,11 @@
-context("lengths()")
+source("helper/helper.R")
 
-test_that("lengths()", {
-  if (!exists("lengths", envir = baseenv()))
-    skip("lengths() not found in base")
+if (exists("lengths", envir = baseenv())) {
   f = get("lengths", envir = baseenv())
-  expect_same = makeCompareFun(f, lengths)
+  expect_same = makeCompareFun(f, backports:::lengths)
 
   expect_same(1:3)
   expect_same(setNames(1:3, letters[1:3]))
   expect_same(setNames(1:3, letters[1:3]), use.names = FALSE)
   expect_same(iris)
-})
+}

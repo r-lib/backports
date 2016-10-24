@@ -1,10 +1,8 @@
-context("strrep")
+source("helper/helper.R")
 
-test_that("strrep", {
-  if (!exists("strrep", envir = baseenv()))
-    skip("strrep() not found in base")
+if (exists("strrep", envir = baseenv())) {
   f = get("strrep", envir = baseenv())
-  expect_same = makeCompareFun(f, strrep)
+  expect_same = makeCompareFun(f, backports:::strrep)
 
   expect_same(NULL, 0)
   expect_same(NULL, 1)
@@ -39,4 +37,4 @@ test_that("strrep", {
   expect_same(TRUE, 1:2)
   expect_same("a", NA)
   expect_same("a", c(1, NA, 2))
-})
+}

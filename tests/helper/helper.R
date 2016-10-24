@@ -1,8 +1,12 @@
+library(backports)
 library(checkmate)
 
-skip_if_version_lt = function(v) {
-  if (getRversion() < v)
-    skip("Insufficient R version")
+expect_identical = function(x, y) {
+  stopifnot(identical(x, y))
+}
+
+expect_true = function(x) {
+  stopifnot(isTRUE(x))
 }
 
 makeCompareFun = function(f1, f2, ...) {
@@ -13,7 +17,7 @@ makeCompareFun = function(f1, f2, ...) {
     r1 = try(f1(...), silent = TRUE)
     r2 = try(f2(...), silent = TRUE)
     if (inherits(r1, "try-error")) {
-      expect_true(inherits(r2, "try-error"))
+      stopifnot(inherits(r2, "try-error"))
     } else {
       expect_identical(r1, r2)
     }
