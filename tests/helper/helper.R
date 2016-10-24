@@ -1,5 +1,4 @@
 library(backports)
-library(checkmate)
 
 expect_identical = function(x, y) {
   stopifnot(identical(x, y))
