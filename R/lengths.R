@@ -2,7 +2,7 @@
 #' @rdname lengths
 #'
 #' @description
-#' See the original description in \code{base::trimws}.
+#' See the original description in \code{base::lengths}.
 #'
 #' @param x
 #'  See description.

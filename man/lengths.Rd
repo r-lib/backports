@@ -12,6 +12,6 @@ lengths(x, use.names = TRUE)
 \item{use.names}{See description.}
 }
 \description{
-See the original description in \code{base::trimws}.
+See the original description in \code{base::lengths}.
 }
 
