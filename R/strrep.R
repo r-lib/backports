@@ -1,14 +1,14 @@
-#' @title Backport of strrep
+#' @title Backport of strrep for R < 3.3.0
 #' @rdname strrep
 #'
 #' @description
 #' See the original description in \code{base::strrep}.
 #'
-#' @param x
-#'  See description.
-#' @param times
-#'  See description.
+#' @keywords internal
 #' @rawNamespace if (getRversion() < "3.3.0") export(strrep)
+#' @examples
+#' bp_strrep = getFromNamespace("strrep", "backports")
+#' bp_strrep("-", 10)
 strrep = function(x, times) {
   x = as.character(x)
   if (length(x) == 0L)

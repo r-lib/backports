@@ -2,16 +2,16 @@
 % Please edit documentation in R/hasName.R
 \name{hasName}
 \alias{hasName}
-\title{Backport of hasName}
+\title{Backport of hasName for R < 3.4.0}
 \usage{
 hasName(x, name)
-}
-\arguments{
-\item{x}{See description.}
-
-\item{name}{See description.}
 }
 \description{
 See the original description in \code{utils::hasName}.
 }
+\examples{
+bp_hasName = getFromNamespace("hasName", "backports")
+bp_hasName(list(a = 1, b = 2), c("a", "b", "c"))
+}
+\keyword{internal}
 

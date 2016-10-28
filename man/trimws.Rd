@@ -2,16 +2,17 @@
 % Please edit documentation in R/trimws.R
 \name{trimws}
 \alias{trimws}
-\title{Backport of trimws}
+\title{Backport of trimws for R < 3.3.0}
 \usage{
 trimws(x, which = c("both", "left", "right"))
-}
-\arguments{
-\item{x}{See description.}
-
-\item{which}{See description.}
 }
 \description{
 See the original description in \code{base::trimws}.
 }
+\examples{
+bp_trimws = getFromNamespace("trimws", "backports")
+bp_trimws(c("  a  ", "b  ", "  c"))
+bp_trimws(c("  a  ", "b  ", "  c"), which = "left")
+}
+\keyword{internal}
 

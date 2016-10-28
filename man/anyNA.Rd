@@ -2,16 +2,16 @@
 % Please edit documentation in R/anyNA.R
 \name{anyNA}
 \alias{anyNA}
-\title{Backport of anyNA}
+\title{Backport of anyNA for R versions < 3.2.0.}
 \usage{
 anyNA(x, recursive = FALSE)
-}
-\arguments{
-\item{x}{See description.}
-
-\item{recursive}{See description.}
 }
 \description{
 See the original description in \code{base::anyNA}.
 }
+\examples{
+bp_anyNA = getFromNamespace("anyNA", "backports")
+bp_anyNA(letters)
+}
+\keyword{internal}
 

@@ -2,17 +2,17 @@
 % Please edit documentation in R/file.info.R
 \name{file.info}
 \alias{file.info}
-\title{Backport of \code{file.info}}
+\title{Backport of \code{file.info} for R < 3.2.0}
 \usage{
 file.info(..., extra_cols = TRUE)
-}
-\arguments{
-\item{...}{See description.}
-
-\item{extra_cols}{See description.}
 }
 \description{
 Argument \code{extra_cols} has been backported.
 See the original description in \code{base::file.info}.
 }
+\examples{
+bp_file.info = getFromNamespace("file.info", "backports")
+bp_file.info(file.path(R.home(), "COPYING"), extra_cols = FALSE)
+}
+\keyword{internal}
 

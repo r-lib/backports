@@ -1,0 +1,2 @@
+#' @importFrom utils getFromNamespace
+NULL

@@ -1,14 +1,13 @@
-#' @title Backport of anyNA
-#' @rdname anyNA
+#' @title Backport of anyNA for R versions < 3.2.0.
 #'
 #' @description
 #' See the original description in \code{base::anyNA}.
 #'
-#' @param x
-#'  See description.
-#' @param recursive
-#'  See description.
+#' @keywords internal
 #' @rawNamespace if (getRversion() < "3.2.0") export(anyNA)
+#' @examples
+#' bp_anyNA = getFromNamespace("anyNA", "backports")
+#' bp_anyNA(letters)
 anyNA = function(x, recursive = FALSE) {
   if (isTRUE(recursive) && (is.list(x) || is.pairlist(x)))
     return(any(rapply(x, anyNA, how = "unlist", recursive = FALSE)))

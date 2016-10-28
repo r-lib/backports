@@ -2,16 +2,16 @@
 % Please edit documentation in R/endsWith.R
 \name{endsWith}
 \alias{endsWith}
-\title{Backport of endsWith}
+\title{Backport of endsWith for R < 3.3.0}
 \usage{
 endsWith(x, suffix)
-}
-\arguments{
-\item{x}{See description.}
-
-\item{suffix}{See description.}
 }
 \description{
 See the original description in \code{base::endsWith}.
 }
+\examples{
+bp_endsWith = getFromNamespace("endsWith", "backports")
+bp_endsWith(c("aabb", "bbcc"), "bb")
+}
+\keyword{internal}
 
