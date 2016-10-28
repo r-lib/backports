@@ -10,7 +10,10 @@ strrep(x, times)
 See the original description in \code{base::strrep}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_strrep = getFromNamespace("strrep", "backports")
+
 bp_strrep("-", 10)
 }
 \keyword{internal}

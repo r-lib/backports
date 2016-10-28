@@ -11,7 +11,10 @@ Argument \code{extra_cols} has been backported.
 See the original description in \code{base::file.info}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_file.info = getFromNamespace("file.info", "backports")
+
 bp_file.info(file.path(R.home(), "COPYING"), extra_cols = FALSE)
 }
 \keyword{internal}

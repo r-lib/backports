@@ -10,8 +10,11 @@ trimws(x, which = c("both", "left", "right"))
 See the original description in \code{base::trimws}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_trimws = getFromNamespace("trimws", "backports")
 bp_trimws(c("  a  ", "b  ", "  c"))
+
 bp_trimws(c("  a  ", "b  ", "  c"), which = "left")
 }
 \keyword{internal}

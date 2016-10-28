@@ -7,7 +7,10 @@
 #' @keywords internal
 #' @rawNamespace if (getRversion() < "3.3.0") export(endsWith)
 #' @examples
+#' # get function from namespace instead of possibly getting
+#' # implementation shipped with recent R versions:
 #' bp_endsWith = getFromNamespace("endsWith", "backports")
+#'
 #' bp_endsWith(c("aabb", "bbcc"), "bb")
 endsWith = function(x, suffix) {
   if (!is.character(x) || !is.character(suffix))

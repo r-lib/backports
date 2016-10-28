@@ -7,7 +7,10 @@
 #' @keywords internal
 #' @rawNamespace if (getRversion() < "3.3.0") export(startsWith)
 #' @examples
+#' # get function from namespace instead of possibly getting
+#' # implementation shipped with recent R versions:
 #' bp_startsWith = getFromNamespace("startsWith", "backports")
+#'
 #' bp_startsWith(c("aabb", "bbcc"), "bb")
 startsWith = function(x, prefix) {
   if (!is.character(x) || !is.character(prefix))

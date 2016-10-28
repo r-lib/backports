@@ -10,7 +10,10 @@ endsWith(x, suffix)
 See the original description in \code{base::endsWith}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_endsWith = getFromNamespace("endsWith", "backports")
+
 bp_endsWith(c("aabb", "bbcc"), "bb")
 }
 \keyword{internal}

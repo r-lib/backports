@@ -10,7 +10,10 @@ hasName(x, name)
 See the original description in \code{utils::hasName}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_hasName = getFromNamespace("hasName", "backports")
+
 bp_hasName(list(a = 1, b = 2), c("a", "b", "c"))
 }
 \keyword{internal}

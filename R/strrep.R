@@ -7,7 +7,10 @@
 #' @keywords internal
 #' @rawNamespace if (getRversion() < "3.3.0") export(strrep)
 #' @examples
+#' # get function from namespace instead of possibly getting
+#' # implementation shipped with recent R versions:
 #' bp_strrep = getFromNamespace("strrep", "backports")
+#'
 #' bp_strrep("-", 10)
 strrep = function(x, times) {
   x = as.character(x)

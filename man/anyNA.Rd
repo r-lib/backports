@@ -10,7 +10,10 @@ anyNA(x, recursive = FALSE)
 See the original description in \code{base::anyNA}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_anyNA = getFromNamespace("anyNA", "backports")
+
 bp_anyNA(letters)
 }
 \keyword{internal}

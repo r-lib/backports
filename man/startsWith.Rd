@@ -10,7 +10,10 @@ startsWith(x, prefix)
 See the original description in \code{base::startsWith}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_startsWith = getFromNamespace("startsWith", "backports")
+
 bp_startsWith(c("aabb", "bbcc"), "bb")
 }
 \keyword{internal}

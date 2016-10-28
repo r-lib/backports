@@ -10,7 +10,10 @@ dir.exists(paths)
 See the original description in \code{base::dir.exists}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_dir.exists = getFromNamespace("dir.exists", "backports")
+
 bp_dir.exists(tempdir())
 }
 \keyword{internal}

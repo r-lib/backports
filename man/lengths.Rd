@@ -10,7 +10,10 @@ lengths(x, use.names = TRUE)
 See the original description in \code{base::lengths}.
 }
 \examples{
+# get function from namespace instead of possibly getting
+# implementation shipped with recent R versions:
 bp_lengths = getFromNamespace("lengths", "backports")
+
 bp_lengths(list(1:3, 2))
 }
 \keyword{internal}
