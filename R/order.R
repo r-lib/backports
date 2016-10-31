@@ -14,5 +14,5 @@
 #' x = runif(10)
 #' data.frame(x = x, order = bp_order(x, method = "radix"))
 order = function (..., na.last = TRUE, decreasing = FALSE, method = c("shell", "radix")) {
-  base::order(..., na.last = na.last, decreasing = decreasing, method = "shell")
+  base::order(..., na.last = na.last, decreasing = decreasing)
 }
