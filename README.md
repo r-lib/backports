@@ -27,6 +27,8 @@ Set the minimum required R version to 3.0.0.
 * `startsWith()` and `endsWith()`
 * `strrep()`
 * `trimws()`
+* Value `"radix` for argument `method` in `sort()`.
+* Value `"radix` for argument `method` in `order()`.
 
 ## Backports for R versions prior to 3.4.0
 

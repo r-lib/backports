@@ -1,6 +1,8 @@
 # backports 1.0.5
 
 * Added examples.
+* Added possibility to set `method = "radix"` in `sort()` and `order()` for R versions
+  prior to 3.3.0 with a fallback to shell sort.
 
 # backports 1.0.4
 
