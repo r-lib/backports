@@ -1,9 +1,11 @@
 source("helper/helper.R")
 
-if (getRversion() > "3.2.0") {
+if (getRversion() >= "3.3.0") {
+  f = get("order", envir = baseenv())
+  expect_same = makeCompareFun(f, backports:::order)
   x = rand(1000)
-  stopifnot(all.equal(backports::order(x), base::order(x)))
-  stopifnot(all.equal(backports::order(x, method = "radix"), base::order(x, method = "radix")))
+  expect_same(x)
+  expect_same(x, method = "radix")
 }
 
 x = rand(1000)
