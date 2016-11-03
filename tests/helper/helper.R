@@ -24,7 +24,7 @@ makeCompareFun = function(f1, f2, ...) {
 }
 
 rand = function(n) {
-  pool = c(letters, LETTERS, 0:9, "ä", "ü", "ö", "ß", "!", "'", "?", ".", "€")
+  pool = c(letters[1:5], LETTERS[1:5], 0:5, "ä", "ß", "!", "'", "?", ".", "€")
   sapply(replicate(n, sample(pool, sample(3:10))), paste, collapse = "")
 }
 
