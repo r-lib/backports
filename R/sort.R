@@ -14,7 +14,11 @@
 #' bp_sort(runif(10), method = "radix")
 sort = function (x, decreasing = FALSE, method = c("shell", "quick", "radix"), ...) {
   method = match.arg(method)
-  if (identical(method, "radix"))
+  if (identical(method, "radix")) {
     method = "shell"
+    old = Sys.getlocale("LC_COLLATE")
+    on.exit(Sys.setlocale("LC_COLLATE", old))
+    Sys.setlocale("LC_COLLATE", "C")
+  }
   base::sort(x, decreasing = FALSE, method = method, ...)
 }

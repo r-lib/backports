@@ -14,5 +14,11 @@
 #' x = runif(10)
 #' data.frame(x = x, order = bp_order(x, method = "radix"))
 order = function (..., na.last = TRUE, decreasing = FALSE, method = c("shell", "radix")) {
+  method = match.arg(method)
+  if (identical(method, "radix")) {
+    old = Sys.getlocale("LC_COLLATE")
+    on.exit(Sys.setlocale("LC_COLLATE", old))
+    Sys.setlocale("LC_COLLATE", "C")
+  }
   base::order(..., na.last = na.last, decreasing = decreasing)
 }
