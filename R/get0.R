@@ -17,7 +17,7 @@
 #' foo = 12
 #' bp_get0("foo")
 get0 = function(x, envir = pos.to.env(-1L), mode = "any", inherits = TRUE, ifnotfound = NULL) {
-  if (exists(x, envir = envir, mode = mode, inherits = inherits))
-    return(get(x, envir = envir, mode = mode, inherits = inherits))
-  return(ifnotfound)
+  if (!is.character(x) || length(x) == 0L)
+    stop("Invalid first argument")
+  mget(x[1L], envir = envir, mode = mode, inherits = inherits, ifnotfound = list(ifnotfound))[[1L]]
 }

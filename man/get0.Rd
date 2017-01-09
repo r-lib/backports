@@ -16,6 +16,10 @@ See the original description in \code{base::get0}.
 bp_get0 = getFromNamespace("get0", "backports")
 
 bp_get0("a")
+bp_get0("a", ifnotfound = 0)
+
+foo = 12
+bp_get0("foo")
 }
 \keyword{internal}
 
