@@ -17,4 +17,3 @@ bp_dir.exists = getFromNamespace("dir.exists", "backports")
 bp_dir.exists(tempdir())
 }
 \keyword{internal}
-

@@ -17,4 +17,3 @@ bp_endsWith = getFromNamespace("endsWith", "backports")
 bp_endsWith(c("aabb", "bbcc"), "bb")
 }
 \keyword{internal}
-

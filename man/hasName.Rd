@@ -17,4 +17,3 @@ bp_hasName = getFromNamespace("hasName", "backports")
 bp_hasName(list(a = 1, b = 2), c("a", "b", "c"))
 }
 \keyword{internal}
-

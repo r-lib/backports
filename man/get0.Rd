@@ -22,4 +22,3 @@ foo = 12
 bp_get0("foo")
 }
 \keyword{internal}
-

@@ -17,4 +17,3 @@ bp_lengths = getFromNamespace("lengths", "backports")
 bp_lengths(list(1:3, 2))
 }
 \keyword{internal}
-

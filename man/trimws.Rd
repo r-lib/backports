@@ -18,4 +18,3 @@ bp_trimws(c("  a  ", "b  ", "  c"))
 bp_trimws(c("  a  ", "b  ", "  c"), which = "left")
 }
 \keyword{internal}
-

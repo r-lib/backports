@@ -17,4 +17,3 @@ bp_anyNA = getFromNamespace("anyNA", "backports")
 bp_anyNA(letters)
 }
 \keyword{internal}
-

@@ -17,4 +17,3 @@ bp_strrep = getFromNamespace("strrep", "backports")
 bp_strrep("-", 10)
 }
 \keyword{internal}
-

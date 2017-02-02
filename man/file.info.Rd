@@ -18,4 +18,3 @@ bp_file.info = getFromNamespace("file.info", "backports")
 bp_file.info(file.path(R.home(), "COPYING"), extra_cols = FALSE)
 }
 \keyword{internal}
-
