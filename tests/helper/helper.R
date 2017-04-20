@@ -22,3 +22,15 @@ makeCompareFun = function(f1, f2, ...) {
     }
   }
 }
+
+rand = function(n) {
+  pool = c(letters[1:5], LETTERS[1:5], 0:5, "ä", "ß", "!", "'", "?", ".", "€")
+  sapply(replicate(n, sample(pool, sample(3:10))), paste, collapse = "")
+}
+
+is.sorted = function(x) {
+  old = Sys.getlocale("LC_COLLATE")
+  on.exit(Sys.setlocale("LC_COLLATE", old))
+  Sys.setlocale("LC_COLLATE", "C")
+  !is.unsorted(x)
+}
