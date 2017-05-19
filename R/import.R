@@ -25,21 +25,23 @@
 #' }
 #' }
 import = function(pkgname, obj = NULL) {
-  pkg = getNamespace(pkgname)
-  backports = getNamespace("backports")
+  if (getRversion() <= "3.4.0") {
+    pkg = getNamespace(pkgname)
+    backports = getNamespace("backports")
 
-  assignIfNotExists = function(x, where) {
-    if (!exists(x, envir = where))
-      assign(x, get(x, envir = backports), envir = pkg)
+    assignIfNotExists = function(x, where) {
+      if (!exists(x, envir = where))
+        assign(x, get(x, envir = backports), envir = pkg)
+    }
+
+    if (!is.null(obj)) {
+      BASE = intersect(BASE, obj)
+      UTILS = intersect(UTILS, obj)
+    }
+
+    lapply(BASE, assignIfNotExists, where = baseenv())
+    lapply(UTILS, assignIfNotExists, where = getNamespace("utils"))
   }
-
-  if (!is.null(obj)) {
-    BASE = intersect(BASE, obj)
-    UTILS = intersect(UTILS, obj)
-  }
-
-  lapply(BASE, assignIfNotExists, where = baseenv())
-  lapply(UTILS, assignIfNotExists, where = getNamespace("utils"))
   invisible(TRUE)
 }
 
