@@ -8,11 +8,11 @@ import(pkgname, obj = NULL)
 }
 \arguments{
 \item{pkgname}{[\code{character(1)}]\cr
-Name of the package where the function should be assigned.}
+Name of the package where the backported function should be assigned.}
 
 \item{obj}{[\code{character}]\cr
 Name of objects to assign, as character vector.
-If \code{NULL}, all backports which are not provided by R are assigned.}
+If \code{NULL}, all backports which are not provided by R itself are assigned.}
 }
 \description{
 Imports objects from \pkg{backports} into the namespace of other packages
