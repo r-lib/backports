@@ -23,6 +23,7 @@ This way, package developers can make use of new functions or arguments without 
      backports::import(pkgname)
    }
    ```
+3. Update `Depends` in your DESCRIPTION to require `R (>= 3.0.0)`
 
 ## Backports for R versions prior to 3.2.0
 

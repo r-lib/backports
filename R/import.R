@@ -33,8 +33,6 @@ import = function(pkgname, obj = NULL) {
       assign(x, get(x, envir = backports), envir = pkg)
   }
 
-  bp.base = backports$base
-  bp.utils = backports$utils
   if (!is.null(obj)) {
     bp.base = intersect(bp.base, obj)
     bp.utils = intersect(bp.utils, obj)
@@ -44,3 +42,7 @@ import = function(pkgname, obj = NULL) {
   lapply(bp.utils, assignIfNotExists, where = getNamespace("utils"))
   invisible(TRUE)
 }
+
+bp.base = c("anyNA", "dir.exists", "endsWith", "file.info", "file.mode", "file.mtime", "file.size", "get0", "lengths", "startsWith", "strrep", "trimws")
+
+bp.utils = "hasName"
