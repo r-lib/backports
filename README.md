@@ -10,9 +10,19 @@ This way, package developers can make use of new functions or arguments without 
 
 ## Usage
 
-Simple: Just add backports to your DESCRIPTION as import and also import it into your NAMESPACE file (manually or via roxygen).
-Do not directly import specific functions (via `importFrom`) as they might not be exported for all R versions.
-Set the minimum required R version to 3.0.0.
+1. Add backports to your DESCRIPTION under `Imports`.
+2. Add or modify the function `.onLoad()` (see [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/ns-hooks.html)) to call the `import()` function of backports:
+   ```r
+   .onLoad <- function(libname, pkgname) {
+     backports::import(pkgname)
+   }
+   ```
+   You can also selectively import functions:
+   ```r
+   .onLoad <- function(libname, c("get0", "dir.exists")) {
+     backports::import(pkgname)
+   }
+   ```
 
 ## Backports for R versions prior to 3.2.0
 

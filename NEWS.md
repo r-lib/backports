@@ -1,3 +1,10 @@
+# backports 1.1.0
+
+* New import mechanism to import packages during load-time with the function `import()`.
+  This is now the recommended way to use backports non-interactively.
+  Simply importing backports in the NAMESPACE still works, but is comparably error-prone
+  if the same library is used by multiple R installations.
+
 # backports 1.0.5
 
 * Added `get0()` for R versions prior to 3.2.0.
