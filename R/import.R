@@ -1,9 +1,9 @@
-#' @title Import backported functions into your package environment
+#' @title Import backported functions into your package
 #'
 #' @description
 #' Imports objects from \pkg{backports} into the namespace of other packages
-#' by assigning it.
-#' See examples for a code snippet to add to your package to do this during load-time.
+#' by assigning it during load-time.
+#' See examples for a code snippet to copy to your package.
 #'
 #' @param pkgname [\code{character(1)}]\cr
 #'   Name of the package where the backported function should be assigned.
@@ -25,7 +25,7 @@
 #' }
 #' }
 import = function(pkgname, obj = NULL) {
-  if (getRversion() <= "3.4.0") {
+  if (getRversion() < "3.4.0") {
     pkg = getNamespace(pkgname)
     backports = getNamespace("backports")
 
