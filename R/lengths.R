@@ -5,7 +5,7 @@
 #' See the original description in \code{base::lengths}.
 #'
 #' @keywords internal
-#' @rawNamespace if (getRversion() < "3.3.0") export(lengths)
+#' @rawNamespace if (getRversion() < "3.2.0") export(lengths)
 #' @examples
 #' # get function from namespace instead of possibly getting
 #' # implementation shipped with recent R versions:
