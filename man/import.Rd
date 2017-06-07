@@ -2,7 +2,7 @@
 % Please edit documentation in R/import.R
 \name{import}
 \alias{import}
-\title{Import backported functions into your package environment}
+\title{Import backported functions into your package}
 \usage{
 import(pkgname, obj = NULL)
 }
@@ -16,8 +16,8 @@ If \code{NULL}, all backports which are not provided by R itself are assigned.}
 }
 \description{
 Imports objects from \pkg{backports} into the namespace of other packages
-by assigning it.
-See examples for a code snippet to add to your package to do this during load-time.
+by assigning it during load-time.
+See examples for a code snippet to copy to your package.
 }
 \examples{
 \dontrun{
