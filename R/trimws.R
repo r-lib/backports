@@ -15,9 +15,10 @@
 #' bp_trimws(c("  a  ", "b  ", "  c"), which = "left")
 trimws = function(x, which = c("both", "left", "right")) {
   which = match.arg(which)
-  if (which %in% c("left", "both"))
-    x = gsub("^[[:space:]]", "", x)
-  if (which %in% c("right", "both"))
-    x = gsub("[[:space:]]$", "", x)
-  return(x)
+  mysub = function(re, x) sub(re, "", x, perl = TRUE)
+  if (which == "left")
+    return(mysub("^[ \t\r\n]+", x))
+  if (which == "right")
+    return(mysub("[ \t\r\n]+$", x))
+  mysub("[ \t\r\n]+$", mysub("^[ \t\r\n]+", x))
 }
