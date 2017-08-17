@@ -2,3 +2,5 @@
 ^.editorconfig$
 ^appveyor\.yml$
 ^\.travis\.yml$
+^src/.+\.o$
+^src/.+\.so$

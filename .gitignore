@@ -1,0 +1,3 @@
+.DS_Store
+/src/*.so
+/src/*.o
