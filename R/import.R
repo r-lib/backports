@@ -46,5 +46,5 @@ import = function(pkgname, obj = NULL) {
 }
 
 # constants used in import()
-BASE = c("anyNA", "dir.exists", "endsWith", "file.info", "file.mode", "file.mtime", "file.size", "get0", "lengths", "startsWith", "strrep", "trimws")
+BASE = c("anyNA", "dir.exists", "endsWith", "file.info", "file.mode", "file.mtime", "file.size", "get0", "lengths", "startsWith", "strrep", "trimws", "...length", "...elt")
 UTILS = "hasName"
