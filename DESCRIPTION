@@ -13,7 +13,7 @@ Description: Implementations of functions which have been introduced in
 URL: https://github.com/mllg/backports
 BugReports: https://github.com/mllg/backports/issues
 License: GPL-2
-NeedsCompilation: no
+NeedsCompilation: yes
 ByteCompile: yes
 Depends:
     R (>= 3.0.0)
