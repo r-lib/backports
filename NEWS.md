@@ -1,3 +1,7 @@
+# backports 1.1.1
+
+* Added `...length()` and `...elt()` for R versions prior to 3.4.1.
+
 # backports 1.1.0
 
 * New import mechanism to import packages during load-time with the function `import()`.
@@ -12,12 +16,12 @@
 
 # backports 1.0.4
 
-* Added `hasName()` for R versions prior to 3.4.0
+* Added `hasName()` for R versions prior to 3.4.0.
 * Added `file.info()` with backport for argument `extra_cols`.
 
 # backports 1.0.3
 
-* Removed stringi dependency
+* Removed stringi dependency.
 
 # backports 1.0.2
 
@@ -25,7 +29,7 @@
 
 # backports 1.0.1
 
-* Added `file.size()`, `file.mtime()` and `file.mode()` for R versions prior to 3.2.0
+* Added `file.size()`, `file.mtime()` and `file.mode()` for R versions prior to 3.2.0.
 
 # backports 1.0.0
 
