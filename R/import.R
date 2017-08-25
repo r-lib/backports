@@ -25,7 +25,7 @@
 #' }
 #' }
 import = function(pkgname, obj = NULL) {
-  if (getRversion() < "3.4.0") {
+  if (getRversion() < "3.5.0") {
     pkg = getNamespace(pkgname)
     backports = getNamespace("backports")
 
