@@ -1,6 +1,7 @@
 # backports 1.1.1
 
 * Added `...length()` and `...elt()` for R versions prior to 3.4.1.
+* Added `isFALSE()` for R versions prior to 3.4.1.
 
 # backports 1.1.0
 
