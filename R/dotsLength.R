@@ -5,7 +5,7 @@
 #' See the original description in \code{base::...length}.
 #'
 #' @keywords internal
-#' @rawNamespace if (getRversion() < "3.4.2") export(...length)
+#' @rawNamespace if (getRversion() < "3.5.0") export(...length)
 #' @useDynLib backports dotsLength
 #' @examples
 #' # get function from namespace instead of possibly getting

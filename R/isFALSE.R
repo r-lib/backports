@@ -5,7 +5,7 @@
 #' See the original description in \code{base::isFALSE}.
 #'
 #' @keywords internal
-#' @rawNamespace if (getRversion() < "3.4.2") export(isFALSE)
+#' @rawNamespace if (getRversion() < "3.5.0") export(isFALSE)
 #' @examples
 #' # get function from namespace instead of possibly getting
 #' # implementation shipped with recent R versions:

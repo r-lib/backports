@@ -5,7 +5,7 @@
 #' See the original description in \code{base::...elt}.
 #'
 #' @keywords internal
-#' @rawNamespace if (getRversion() < "3.4.2") export(...elt)
+#' @rawNamespace if (getRversion() < "3.5.0") export(...elt)
 #' @useDynLib backports dotsElt
 #' @examples
 #' # get function from namespace instead of possibly getting
