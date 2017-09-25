@@ -19,8 +19,8 @@ This way, package developers can make use of new functions or arguments without 
    ```
    You can also selectively import functions:
    ```r
-   .onLoad <- function(libname, c("get0", "dir.exists")) {
-     backports::import(pkgname)
+   .onLoad <- function(libname, pkgname) {
+     backports::import(pkgname, c("get0", "dir.exists"))
    }
    ```
 3. [Optional] Set `Depends` in your DESCRIPTION to require `R (>= 3.0.0)`.
