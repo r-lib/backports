@@ -1,3 +1,8 @@
+# backports 1.1.2
+
+* Improved import mechanism.
+* Added `.valid.factor()` for R versions prior to 3.4.0.
+
 # backports 1.1.1
 
 * Added `...length()` and `...elt()` for R versions prior to 3.5.0.

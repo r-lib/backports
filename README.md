@@ -48,6 +48,7 @@ This way, package developers can make use of new functions or arguments without 
 
 ## Backports for R versions prior to 3.4.0
 
+* `.valid.factor()`
 * `hasName()`. Note that this function is implemented in package `utils`.
   Either explicitly import with `force = TRUE` or import `utils` completely.
   `importForm(utils, head)` will lead to warnings in `R CMD check`.
