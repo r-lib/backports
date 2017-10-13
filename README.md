@@ -23,6 +23,12 @@ This way, package developers can make use of new functions or arguments without 
      backports::import(pkgname, c("get0", "dir.exists"))
    }
    ```
+   If you set `force = TRUE`, the provided functions will get imported, regardless of the R version:
+   ```r
+   .onLoad <- function(libname, pkgname) {
+     backports::import(pkgname, "hasName", force = TRUE)
+   }
+   ```
 3. [Optional] Set `Depends` in your DESCRIPTION to require `R (>= 3.0.0)`.
 
 
@@ -42,9 +48,12 @@ This way, package developers can make use of new functions or arguments without 
 
 ## Backports for R versions prior to 3.4.0
 
-* `hasName()`
+* `hasName()`. Note that this function is implemented in package `utils`.
+  Either explicitly import with `force = TRUE` or import `utils` completely.
+  `importForm(utils, head)` will lead to warnings in `R CMD check`.
 
-## Backports for R versions prior to 3.4.1
+## Backports for R versions prior to 3.5.0
 
 * `...length()`
 * `...elt()`
+* `isFALSE()`

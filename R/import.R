@@ -10,6 +10,10 @@
 #' @param obj [\code{character}]\cr
 #'   Name of objects to assign, as character vector.
 #'   If \code{NULL}, all backports which are not provided by R itself are assigned.
+#' @param force [\code{logical}]\cr
+#'   If \code{obj} is provided and \code{force} is set to \code{FALSE}, only backports
+#'   not provided by the base package of the executing R interpreter are imported.
+#'   Set to \code{TRUE} to ignore this check and always import the backport into the package's namespace.
 #' @export
 #' @seealso \code{\link[base]{.onLoad}}
 #' @examples
@@ -24,27 +28,32 @@
 #'   backports::import(pkgname, "trimws")
 #' }
 #' }
-import = function(pkgname, obj = NULL) {
-  if (getRversion() < "3.5.0") {
+import = function(pkgname, obj = NULL, force = FALSE) {
+  if (is.null(obj)) {
+    obj = get_backports()
+  } else if (!isTRUE(force)) {
+    obj = intersect(obj, get_backports())
+  }
+
+  if (length(obj) > 0L) {
     pkg = getNamespace(pkgname)
     backports = getNamespace("backports")
-
-    assignIfNotExists = function(x, where) {
-      if (!exists(x, envir = where))
-        assign(x, get(x, envir = backports), envir = pkg)
-    }
-
-    if (!is.null(obj)) {
-      BASE = intersect(BASE, obj)
-      UTILS = intersect(UTILS, obj)
-    }
-
-    lapply(BASE, assignIfNotExists, where = baseenv())
-    lapply(UTILS, assignIfNotExists, where = getNamespace("utils"))
+    for (x in obj)
+      assign(x, get(x, envir = backports), envir = pkg)
   }
   invisible(TRUE)
 }
 
-# constants used in import()
-BASE = c("anyNA", "dir.exists", "endsWith", "file.info", "file.mode", "file.mtime", "file.size", "get0", "lengths", "startsWith", "strrep", "trimws", "...length", "...elt", "isFALSE")
-UTILS = "hasName"
+get_backports = function() {
+  v = getRversion()
+  unlist(tail(FUNS, -(v$minor + 1L)), use.names = FALSE)
+}
+
+FUNS = list(
+  "3.0.0" = character(),
+  "3.1.0" = character(),
+  "3.2.0" = c("anyNA", "dir.exists", "file.size", "file.mode", "file.mtime", "lengths", "file.info"),
+  "3.3.0" = c("startsWith", "endsWith", "strrep", "trimws"),
+  "3.4.0" = c("hasName"),
+  "3.5.0" = c("...length", "...elt", "isFALSE")
+)

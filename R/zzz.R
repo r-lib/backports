@@ -1,4 +1,4 @@
-#' @importFrom utils getFromNamespace
+#' @importFrom utils getFromNamespace tail
 NULL
 
 .onUnload = function (libpath) {
