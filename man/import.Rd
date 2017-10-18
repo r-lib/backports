@@ -4,7 +4,7 @@
 \alias{import}
 \title{Import backported functions into your package}
 \usage{
-import(pkgname, obj = NULL)
+import(pkgname, obj = NULL, force = FALSE)
 }
 \arguments{
 \item{pkgname}{[\code{character(1)}]\cr
@@ -13,6 +13,11 @@ Name of the package where the backported function should be assigned.}
 \item{obj}{[\code{character}]\cr
 Name of objects to assign, as character vector.
 If \code{NULL}, all backports which are not provided by R itself are assigned.}
+
+\item{force}{[\code{logical}]\cr
+If \code{obj} is provided and \code{force} is set to \code{FALSE}, only backports
+not provided by the base package of the executing R interpreter are imported.
+Set to \code{TRUE} to ignore this check and always import the backport into the package's namespace.}
 }
 \description{
 Imports objects from \pkg{backports} into the namespace of other packages
