@@ -35,6 +35,12 @@ See examples for a code snippet to copy to your package.
 .onLoad <- function(libname, pkgname) {
   backports::import(pkgname, "trimws")
 }
+
+# This imports all backports from base and force-imports "hasName" from utils
+.onLoad <- function(libname, pkgname) {
+  backports::import(pkgname)
+  backports::import(pkgname, "hasName", force = TRUE)
+}
 }
 }
 \seealso{
