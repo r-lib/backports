@@ -11,8 +11,8 @@ Description: Implementations of functions which have been introduced in
     available) and uses the implemented backports as fallback. This way package
     developers can make use of the new functions without worrying about the
     minimum required R version.
-URL: https://github.com/mllg/backports
-BugReports: https://github.com/mllg/backports/issues
+URL: https://github.com/r-lib/backports
+BugReports: https://github.com/r-lib/backports/issues
 License: GPL-2
 NeedsCompilation: yes
 ByteCompile: yes
