@@ -2,6 +2,6 @@
 ^.editorconfig$
 ^appveyor\.yml$
 ^\.travis\.yml$
-^\.ignore\.yml$
+^\.ignore$
 ^src/.+\.o$
 ^src/.+\.so$
