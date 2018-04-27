@@ -2,7 +2,7 @@
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/backports)](http://cran.r-project.org/package=backports)
 [![Travis-CI Build Status](https://travis-ci.org/r-lib/backports.svg?branch=master)](https://travis-ci.org/r-lib/backports)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/nv79p0dlxm2598kn?svg=true)](https://ci.appveyor.com/project/mllg/backports-80n1c)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/nv79p0dlxm2598kn?svg=true)](https://ci.appveyor.com/project/mllg/backports-jd482)
 [![Download Stats](http://cranlogs.r-pkg.org/badges/backports)](https://cran.r-project.org/package=backports)
 
 This package provides backports of functions which have been introduced in one of the base packages in R version 3.0.1 or later.
