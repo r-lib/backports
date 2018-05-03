@@ -7,10 +7,18 @@
 
 This package provides backports of functions which have been introduced in one of the base packages in R version 3.0.1 or later.
 These backports are conditionally exported in order to let R resolve the function name to either the implemented backport, or the respective base version, if available.
-This way, package developers can make use of new functions or arguments without without worrying about the minimum R version required.
+Package developers can make use of new functions or arguments by selectively importing specific backports in order to support older installations.
 
 ## Usage
 
+### Interactively
+
+Attach the namespace via `library(backports)`.
+
+Note that it is crucial that `backports` is build against the currently running R version.
+Do not ignore these kind of warnings for this package.
+
+### In packages
 1. Add backports to your DESCRIPTION under `Imports`.
 2. Add or modify the function `.onLoad()` (see [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/ns-hooks.html)) to call the `import()` function of backports:
    ```r
@@ -46,6 +54,7 @@ This way, package developers can make use of new functions or arguments without 
 * `startsWith()` and `endsWith()`
 * `strrep()`
 * `trimws()`
+* `capture.output()` with argument `type`.
 
 ## Backports for R versions prior to 3.4.0
 

@@ -1,3 +1,7 @@
+# backports 1.1.3
+
+* Added `capture.output()` with support for argument `type` for R versions prior to 3.3.0.
+
 # backports 1.1.2
 
 * Improved import mechanism.
