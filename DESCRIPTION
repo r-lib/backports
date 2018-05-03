@@ -7,12 +7,13 @@ Authors@R: c(
       role = c("cre", "aut"), comment = c(ORCID = "0000-0001-9754-0393")),
     person("R Core Team", role = "aut"))
 Maintainer: Michel Lang <michellang@gmail.com>
-Description: Implementations of functions which have been introduced in
-    R since version 3.0.0. The backports are conditionally exported which
-    results in R resolving the function names to the version shipped with R (if
-    available) and uses the implemented backports as fallback. This way package
-    developers can make use of the new functions without worrying about the
-    minimum required R version.
+Description:
+    This package provides backports of functions which have been introduced in R
+    version 3.0.1 or later. The backports are conditionally exported in order to
+    let R resolve the function name to either the implemented backport, or the
+    respective base version, if available. Package developers can make use of
+    new functions or arguments by selectively importing specific backports to
+    support older installations.
 URL: https://github.com/r-lib/backports
 BugReports: https://github.com/r-lib/backports/issues
 License: GPL-2

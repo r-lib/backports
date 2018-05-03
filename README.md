@@ -6,8 +6,8 @@
 [![Download Stats](http://cranlogs.r-pkg.org/badges/backports)](https://cran.r-project.org/package=backports)
 
 This package provides backports of functions which have been introduced in one of the base packages in R version 3.0.1 or later.
-These backports are conditionally exported in order to let R resolve the function name to either the implemented backport, or the respective base version, if available.
-Package developers can make use of new functions or arguments by selectively importing specific backports in order to support older installations.
+The backports are conditionally exported in order to let R resolve the function name to either the implemented backport, or the respective base version, if available.
+Package developers can make use of new functions or arguments by selectively importing specific backports to support older installations.
 
 ## Usage
 
