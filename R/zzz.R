@@ -1,5 +1,3 @@
-#' @description
-#'
 #' @section Backports for R versions prior to 3.2.0:
 #' \itemize{
 #'  \item{\code{\link{anyNA}}}
