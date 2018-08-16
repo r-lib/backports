@@ -7,8 +7,8 @@
 URLencode(URL, reserved = FALSE, repeated = FALSE)
 }
 \description{
-Argument \code{repeated} is backported.
 See the original description in \code{utils::URLencode}.
+Argument \code{repeated} is backported.
 }
 \examples{
 # get function from namespace instead of possibly getting

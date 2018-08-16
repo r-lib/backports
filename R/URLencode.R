@@ -2,8 +2,8 @@
 #' @rdname URLencode
 #'
 #' @description
-#' Argument \code{repeated} is backported.
 #' See the original description in \code{utils::URLencode}.
+#' Argument \code{repeated} is backported.
 #'
 #' @keywords internal
 #' @rawNamespace if (getRversion() < "3.2.0") export(URLencode)
