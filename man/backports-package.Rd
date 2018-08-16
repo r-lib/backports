@@ -6,12 +6,12 @@
 \alias{backports-package}
 \title{backports: Reimplementations of Functions Introduced Since R-3.0.0}
 \description{
-Backports of functions which have been introduced since R
-version 3.0.1. The backports are conditionally exported in order to
-let R resolve the function name to either the implemented backport, or the
-respective base version, if available. Package developers can make use of
-new functions or arguments by selectively importing specific backports to
-support older installations.
+Functions introduced or changed since R v3.0.0 are re-implemented in this
+    package. The backports are conditionally exported in order to let R resolve
+    the function name to either the implemented backport, or the respective base
+    version, if available. Package developers can make use of new functions or
+    arguments by selectively importing specific backports to
+    support older installations.
 }
 \section{Backports for R versions prior to 3.2.0}{
 
@@ -20,7 +20,8 @@ support older installations.
  \item{\code{\link{dir.exists}}}
  \item{\code{\link{file.size}}, \code{\link{file.mode}}, \code{\link{file.mtime}}}
  \item{\code{\link{lengths}}}
- \item{Argument} \code{extra_cols} for \code{\link{file.info}}
+ \item{Argument \code{extra_cols} for \code{\link[base]{file.info}}}
+ \item{Argument \code{repeated} for \code{\link[utils]{URLencode}}}
 }
 }
 

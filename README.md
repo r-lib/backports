@@ -43,28 +43,27 @@ Do not ignore these kind of warnings for this package.
 
 ## Backports for R versions prior to 3.2.0
 
-* `anyNA()`
-* `dir.exists()`
-* `file.size()`, `file.mode()` and `file.mtime()`
-* `lengths()`
-* Argument `extra_cols` for `file.info()`.
+* `base::anyNA()`
+* `base::dir.exists()`
+* `base::file.size()`, `base::file.mode()` and `base::file.mtime()`
+* `base::lengths()`
+* Argument `extra_cols` for `base::file.info()`
+* Argument `repeated` for `utils::URLencode`
 
 ## Backports for R versions prior to 3.3.0
 
-* `startsWith()` and `endsWith()`
-* `strrep()`
-* `trimws()`
-* `capture.output()` with argument `type`.
+* `base::startsWith()` and `base::endsWith()`
+* `base::strrep()`
+* `base::trimws()`
+* Argument `type` for `base::capture.output()`
 
 ## Backports for R versions prior to 3.4.0
 
-* `.valid.factor()`
-* `hasName()`. Note that this function is implemented in package `utils`.
-  Either explicitly import with `force = TRUE` or import `utils` completely.
-  `importForm(utils, head)` will lead to warnings in `R CMD check`.
+* `base::.valid.factor()`
+* `base::hasName()`. Note that this function is implemented in package `utils`. Either explicitly import with `force = TRUE` or import `utils` completely. `importForm(utils, hasName)` will lead to warnings in `R CMD check` for R versions prior to 3.4.0.
 
 ## Backports for R versions prior to 3.5.0
 
-* `...length()`
-* `...elt()`
-* `isFALSE()`
+* `base::...length()`
+* `base::...elt()`
+* `base::isFALSE()`
