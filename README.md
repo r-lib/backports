@@ -48,6 +48,7 @@ Do not ignore these kind of warnings for this package.
 * `file.size()`, `file.mode()` and `file.mtime()`
 * `lengths()`
 * Argument `extra_cols` for `file.info()`.
+* Argument `repeated` for `URLencode`.
 
 ## Backports for R versions prior to 3.3.0
 

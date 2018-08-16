@@ -4,7 +4,8 @@
 #'  \item{\code{\link{dir.exists}}}
 #'  \item{\code{\link{file.size}}, \code{\link{file.mode}}, \code{\link{file.mtime}}}
 #'  \item{\code{\link{lengths}}}
-#'  \item{Argument} \code{extra_cols} for \code{\link{file.info}}
+#'  \item{Argument \code{extra_cols} for \code{\link[base]{file.info}}}
+#'  \item{Argument \code{repeated} for \code{\link[utils]{URLencode}}}
 #' }
 #'
 #' @section Backports for R versions prior to 3.3.0:
