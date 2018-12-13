@@ -67,3 +67,8 @@ Do not ignore these kind of warnings for this package.
 * `base::...length()`
 * `base::...elt()`
 * `base::isFALSE()`
+
+## Backports for R versions prior to 3.6.0
+
+* `base::warningCondition()`
+* `base::errorCondition()`
