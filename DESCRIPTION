@@ -24,4 +24,4 @@ Depends:
 Imports:
     utils
 Encoding: UTF-8
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
