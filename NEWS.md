@@ -1,7 +1,8 @@
 # backports 1.1.3
 
+* Added `warningCondition()` and `errorCondition()` for R versions prior to 3.6.0.
 * Added `capture.output()` with support for argument `type` for R versions prior to 3.3.0.
-* Added `URLencode` with support for argument `repeated` for R versions prior to 3.2.0.
+* Added `URLencode()` with support for argument `repeated` for R versions prior to 3.2.0.
 
 # backports 1.1.2
 
