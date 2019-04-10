@@ -1,3 +1,6 @@
+# backports 1.1.4
+* Fixed import of `warningCondition` and `errorCondition`.
+
 # backports 1.1.3
 
 * Added `warningCondition()` and `errorCondition()` for R versions prior to 3.6.0.

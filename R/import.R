@@ -62,5 +62,5 @@ FUNS = list(
   "3.3.0" = c("startsWith", "endsWith", "strrep", "trimws", "capture.output"),
   "3.4.0" = c("hasName"),
   "3.5.0" = c("...length", "...elt", "isFALSE"),
-  "3.6.0" = character()
+  "3.6.0" = c("warningCondition", "errorCondition")
 )
