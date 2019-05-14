@@ -1,7 +1,7 @@
 Package: backports
 Type: Package
 Title: Reimplementations of Functions Introduced Since R-3.0.0
-Version: 1.1.4
+Version: 1.1.5
 Authors@R: c(
     person("Michel", "Lang", NULL, "michellang@gmail.com",
       role = c("cre", "aut"), comment = c(ORCID = "0000-0001-9754-0393")),
@@ -16,7 +16,7 @@ Description:
     support older installations.
 URL: https://github.com/r-lib/backports
 BugReports: https://github.com/r-lib/backports/issues
-License: GPL-2
+License: GPL-2 | GPL-3
 NeedsCompilation: yes
 ByteCompile: yes
 Depends:
