@@ -1,5 +1,6 @@
 # backports 1.1.5
 * Changed license from GPL-2 to GPL-2 or GPL-3.
+* Added backport for `isTRUE()` implementing the new behaviour introduced in R 3.5.0.
 
 # backports 1.1.4
 * Fixed import of `warningCondition` and `errorCondition`.
