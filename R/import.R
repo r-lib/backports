@@ -44,8 +44,9 @@ import = function(pkgname, obj = NULL, force = FALSE) {
   if (length(obj) > 0L) {
     pkg = getNamespace(pkgname)
     backports = getNamespace("backports")
-    for (x in obj)
+    for (x in obj) {
       assign(x, get(x, envir = backports), envir = pkg)
+    }
   }
   invisible(TRUE)
 }
@@ -62,5 +63,6 @@ FUNS = list(
   "3.3.0" = c("startsWith", "endsWith", "strrep", "trimws", "capture.output"),
   "3.4.0" = c("hasName"),
   "3.5.0" = c("...length", "...elt", "isFALSE"),
-  "3.6.0" = c("warningCondition", "errorCondition")
+  "3.6.0" = c("warningCondition", "errorCondition"),
+  "4.0.0" = c("R_user_dir")
 )

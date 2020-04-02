@@ -40,6 +40,16 @@ Do not ignore these kind of warnings for this package.
    ```
 3. [Optional] Set `Depends` in your DESCRIPTION to require `R (>= 3.0.0)`.
 
+### Importing backports from `utils` or `tools`
+
+Backports for functions which are not in the `base` require additional steps.
+Usually, you need to to import those functions in the package NAMESPACE.
+However, this is only possible if such a function really exists, and yields a warning during `R CMD check` for older versions.
+There are two possibilities to deal with this:
+
+1. Completely import the namespaces instead of selectively importing them, e.g. use `import(utils)` instead of `importFrom(utils, hasName)` in your `NAMESPACPE` file.
+2. Force-import the function (see above) so that you always use the backport instead of the implementation shipped with R, even for the most recent version of R.
+
 
 ## Backports for R versions prior to 3.2.0
 
@@ -60,7 +70,7 @@ Do not ignore these kind of warnings for this package.
 ## Backports for R versions prior to 3.4.0
 
 * `base::.valid.factor()`
-* `base::hasName()`. Note that this function is implemented in package `utils`. Either explicitly import with `force = TRUE` or import `utils` completely. `importForm(utils, hasName)` will lead to warnings in `R CMD check` for R versions prior to 3.4.0.
+* `utils::hasName()`
 
 ## Backports for R versions prior to 3.5.0
 
@@ -72,3 +82,7 @@ Do not ignore these kind of warnings for this package.
 
 * `base::warningCondition()`
 * `base::errorCondition()`
+
+## Backports for R versions prior to 4.0.0
+
+* `tools::R_user_dir()`

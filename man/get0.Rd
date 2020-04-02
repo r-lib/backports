@@ -4,8 +4,13 @@
 \alias{get0}
 \title{Backport of get0 for R < 3.2.0}
 \usage{
-get0(x, envir = pos.to.env(-1L), mode = "any", inherits = TRUE,
-  ifnotfound = NULL)
+get0(
+  x,
+  envir = pos.to.env(-1L),
+  mode = "any",
+  inherits = TRUE,
+  ifnotfound = NULL
+)
 }
 \description{
 See the original description in \code{base::get0}.
