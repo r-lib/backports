@@ -65,7 +65,7 @@ There are two possibilities to deal with this:
 * `base::startsWith()` and `base::endsWith()`
 * `base::strrep()`
 * `base::trimws()`
-* Argument `type` for `base::capture.output()`
+* Argument `type` for `utils::capture.output()`
 
 ## Backports for R versions prior to 3.4.0
 
@@ -82,6 +82,7 @@ There are two possibilities to deal with this:
 
 * `base::warningCondition()`
 * `base::errorCondition()`
+* Argument `q` for `base::dQuote()` and `base::sQuote()`
 
 ## Backports for R versions prior to 4.0.0
 

@@ -1,4 +1,4 @@
-#' @title Backport of \code{capture.output} for R < 3.3.0
+#' @title Backport of capture.output for R < 3.3.0
 #'
 #' @description
 #' Argument \code{type} has been backported.
