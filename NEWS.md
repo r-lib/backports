@@ -1,3 +1,7 @@
+# backports 1.1.6
+* Added backport for `R_user_dir` for R versions prior to 3.6.0.
+* Added `dQuote()` and `sQuote()` with support for argument `q` for R versions prior to 3.6.0.
+
 # backports 1.1.5
 * Changed license from GPL-2 to GPL-2 or GPL-3.
 * Added backport for `isTRUE()` implementing the new behaviour introduced in R 3.5.0.
