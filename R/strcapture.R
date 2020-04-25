@@ -17,7 +17,7 @@
   }
 }
 
-#' @title Backport of strcapture st2DF for R < 3.4.0
+#' @title Backport of strcapture for R < 3.4.0
 #'
 #' @description
 #' See the original description in \code{utils::strcapture}.
@@ -40,7 +40,8 @@ strcapture <- function(pattern, x, proto, perl = FALSE, useBytes = FALSE) {
       }
       m <- regexec(pattern, x, useBytes = useBytes)
     } else {
-      m <- regexec(pattern, x, perl = perl, useBytes = useBytes)
+      rxc <- regexec
+      m <- rxc(pattern, x, perl = perl, useBytes = useBytes)
     }
   str <- regmatches(x, m)
   ntokens <- length(proto) + 1L
