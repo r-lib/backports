@@ -1,10 +1,10 @@
 #' @title Backport of list2DF for R < 4.0.0
 #'
 #' @description
-#' See the original description in \code{base::R_user_dir}.
+#' See the original description in \code{base::list2DF}.
 #'
 #' @keywords internal
-#' @rawNamespace if (getRversion() < "4.0.0") export(R_user_dir)
+#' @rawNamespace if (getRversion() < "4.0.0") export(list2DF)
 #' @examples
 #' # get function from namespace instead of possibly getting
 #' # implementation shipped with recent R versions:

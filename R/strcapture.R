@@ -17,13 +17,13 @@
   }
 }
 
-#' @title Backport of strcapture st2DF for R < 4.0.0
+#' @title Backport of strcapture st2DF for R < 3.4.0
 #'
 #' @description
 #' See the original description in \code{utils::strcapture}.
 #'
 #' @keywords internal
-#' @rawNamespace if (getRversion() < "4.0.0") export(R_user_dir)
+#' @rawNamespace if (getRversion() < "3.4.0") export(strcapture)
 #' @examples
 #' # get function from namespace instead of possibly getting
 #' # implementation shipped with recent R versions:
@@ -34,7 +34,14 @@
 #' proto <- data.frame(chr=character(), start=integer(), end=integer())
 #' bp_strcapture(pattern, x, proto)
 strcapture <- function(pattern, x, proto, perl = FALSE, useBytes = FALSE) {
-  m <- regexec(pattern, x, perl = perl, useBytes = useBytes)
+    if (getRversion() < "3.3.0")) {
+      if (perl) {
+        stop("`perl` parameter not available in this R version of regexec", call.=FALSE)
+      }
+      m <- regexec(pattern, x, useBytes = useBytes)
+    } else {
+      m <- regexec(pattern, x, perl = perl, useBytes = useBytes)
+    }
   str <- regmatches(x, m)
   ntokens <- length(proto) + 1L
   nomatch <- lengths(str) == 0L
