@@ -7,7 +7,7 @@
 list2DF(x = list(), nrow = NULL)
 }
 \description{
-See the original description in \code{base::R_user_dir}.
+See the original description in \code{base::list2DF}.
 }
 \examples{
 # get function from namespace instead of possibly getting

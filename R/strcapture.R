@@ -34,7 +34,7 @@
 #' proto <- data.frame(chr=character(), start=integer(), end=integer())
 #' bp_strcapture(pattern, x, proto)
 strcapture <- function(pattern, x, proto, perl = FALSE, useBytes = FALSE) {
-    if (getRversion() < "3.3.0")) {
+    if (getRversion() < "3.3.0") {
       if (perl) {
         stop("`perl` parameter not available in this R version of regexec", call.=FALSE)
       }

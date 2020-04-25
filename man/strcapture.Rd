@@ -2,7 +2,7 @@
 % Please edit documentation in R/strcapture.R
 \name{strcapture}
 \alias{strcapture}
-\title{Backport of strcapture st2DF for R < 4.0.0}
+\title{Backport of strcapture st2DF for R < 3.4.0}
 \usage{
 strcapture(pattern, x, proto, perl = FALSE, useBytes = FALSE)
 }
