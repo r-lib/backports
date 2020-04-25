@@ -14,14 +14,8 @@ See the original description in \code{base::list2DF}.
 # implementation shipped with recent R versions:
 bp_list2DF = getFromNamespace("list2DF", "backports")
 
-## Create a data frame holding a list of character vectors and the
-## corresponding lengths:
 x <- list(character(), "A", c("B", "C"))
 n <- lengths(x)
 bp_list2DF(list(x = x, n = n))
-
-## Create data frames with no variables and the desired number of rows:
-bp_list2DF()
-bp_list2DF(nrow = 3L)
 }
 \keyword{internal}

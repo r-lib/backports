@@ -10,15 +10,9 @@
 #' # implementation shipped with recent R versions:
 #' bp_list2DF = getFromNamespace("list2DF", "backports")
 #'
-#' ## Create a data frame holding a list of character vectors and the
-#' ## corresponding lengths:
 #' x <- list(character(), "A", c("B", "C"))
 #' n <- lengths(x)
 #' bp_list2DF(list(x = x, n = n))
-#' 
-#' ## Create data frames with no variables and the desired number of rows:
-#' bp_list2DF()
-#' bp_list2DF(nrow = 3L)
 list2DF <- function (x = list(), nrow = NULL) {
   stopifnot(is.list(x), is.null(nrow) || nrow >= 0L)
   if (n <- length(x)) {
