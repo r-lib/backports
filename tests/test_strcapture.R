@@ -1,7 +1,7 @@
 source("helper/helper.R")
 
 if (exists("strcapture", envir = asNamespace("utils"))) {
-  f = get("strcapture", envir = asNamespace("tools"))
+  f = get("strcapture", envir = asNamespace("utils"))
   expect_same = makeCompareFun(f, backports:::strcapture)
 
   expect_same("backports")

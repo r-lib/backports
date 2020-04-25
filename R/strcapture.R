@@ -29,7 +29,10 @@
 #' # implementation shipped with recent R versions:
 #' bp_strcapture = getFromNamespace("strcapture", "backports")
 #'
-#' bp_strcapture("backports")
+#' x <- "chr1:1-1000"
+#' pattern <- "(.*?):([[:digit:]]+)-([[:digit:]]+)"
+#' proto <- data.frame(chr=character(), start=integer(), end=integer())
+#' bp_strcapture(pattern, x, proto)
 strcapture <- function(pattern, x, proto, perl = FALSE, useBytes = FALSE) {
   m <- regexec(pattern, x, perl = perl, useBytes = useBytes)
   str <- regmatches(x, m)

@@ -14,6 +14,9 @@ See the original description in \code{utils::strcapture}.
 # implementation shipped with recent R versions:
 bp_strcapture = getFromNamespace("strcapture", "backports")
 
-bp_strcapture("backports")
+x <- "chr1:1-1000"
+pattern <- "(.*?):([[:digit:]]+)-([[:digit:]]+)"
+proto <- data.frame(chr=character(), start=integer(), end=integer())
+bp_strcapture(pattern, x, proto)
 }
 \keyword{internal}
