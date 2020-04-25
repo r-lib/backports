@@ -1,6 +1,7 @@
 # backports 1.1.6
 * Added backport for `R_user_dir` for R versions prior to 4.0.0.
 * Added backport for `list2DF` for R versions prior to 4.0.0
+* Added backport for `strcapture` for R versions prior to 3.4.0. Addresses #19.
 * Added `dQuote()` and `sQuote()` with support for argument `q` for R versions prior to 3.6.0.
 
 # backports 1.1.5

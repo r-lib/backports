@@ -71,6 +71,7 @@ There are two possibilities to deal with this:
 
 * `base::.valid.factor()`
 * `utils::hasName()`
+* `utils::strcapture()`
 
 ## Backports for R versions prior to 3.5.0
 

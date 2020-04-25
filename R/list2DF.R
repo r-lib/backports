@@ -10,7 +10,7 @@
 #' # implementation shipped with recent R versions:
 #' bp_list2DF = getFromNamespace("list2DF", "backports")
 #'
-#' bp_R_user_dir("backports")
+#' bp_list2DF("backports")
 list2DF <- function (x = list(), nrow = NULL) {
   stopifnot(is.list(x), is.null(nrow) || nrow >= 0L)
   if (n <- length(x)) {

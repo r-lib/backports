@@ -14,6 +14,6 @@ See the original description in \code{base::R_user_dir}.
 # implementation shipped with recent R versions:
 bp_list2DF = getFromNamespace("list2DF", "backports")
 
-bp_R_user_dir("backports")
+bp_list2DF("backports")
 }
 \keyword{internal}
