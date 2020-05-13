@@ -86,4 +86,6 @@ There are two possibilities to deal with this:
 
 ## Backports for R versions prior to 4.0.0
 
+* `base::deparse1()`
+* `base::list2DF()`
 * `tools::R_user_dir()`
