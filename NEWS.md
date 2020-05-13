@@ -1,5 +1,8 @@
+# backports 1.1.7
+* Added backport for `deparse1()` for R versions prior to 4.0.0.
+
 # backports 1.1.6
-* Added backport for `R_user_dir` for R versions prior to 4.0.0.
+* Added backport for `R_user_dir()` for R versions prior to 4.0.0.
 * Added `dQuote()` and `sQuote()` with support for argument `q` for R versions prior to 3.6.0.
 
 # backports 1.1.5
@@ -7,7 +10,7 @@
 * Added backport for `isTRUE()` implementing the new behaviour introduced in R 3.5.0.
 
 # backports 1.1.4
-* Fixed import of `warningCondition` and `errorCondition`.
+* Fixed import of `warningCondition()` and `errorCondition()`.
 
 # backports 1.1.3
 
