@@ -1,5 +1,5 @@
 # backports 1.1.8
-* Added backport for `tools::vignetteInfo()` for R versions prior to 4.0.0.
+* Added backport for `tools::vignetteInfo()` for R versions prior to 3.6.0
 
 # backports 1.1.7
 * Added backport for `deparse1()` for R versions prior to 4.0.0.
