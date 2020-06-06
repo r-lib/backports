@@ -62,7 +62,7 @@ FUNS = list(
   "3.2.0" = c("anyNA", "dir.exists", "file.size", "file.mode", "file.mtime", "lengths", "file.info", "URLencode"),
   "3.3.0" = c("startsWith", "endsWith", "strrep", "trimws", "capture.output"),
   "3.4.0" = c("hasName"),
-  "3.5.0" = c("...length", "...elt", "isFALSE"),
-  "3.6.0" = c("warningCondition", "errorCondition"),
-  "4.0.0" = c("R_user_dir")
+  "3.5.0" = c("...length", "...elt", "isFALSE", "isTRUE"),
+  "3.6.0" = c("warningCondition", "errorCondition", "vignetteInfo", "dQuote", "sQuote"),
+  "4.0.0" = c("R_user_dir", "deparse1", "list2DF")
 )

@@ -83,6 +83,7 @@ There are two possibilities to deal with this:
 * `base::warningCondition()`
 * `base::errorCondition()`
 * Argument `q` for `base::dQuote()` and `base::sQuote()`
+* `tools::vignetteInfo()`
 
 ## Backports for R versions prior to 4.0.0
 
