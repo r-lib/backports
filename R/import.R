@@ -15,7 +15,7 @@
 #'   not provided by the base package of the executing R interpreter are imported.
 #'   Set to \code{TRUE} to ignore this check and always import the backport into the package's namespace.
 #' @export
-#' @seealso \code{\link[base]{.onLoad}}
+#' @seealso \code{\link{.onLoad}}
 #' @examples
 #' \dontrun{
 #' # This imports all functions implemented in backports while the package is loaded

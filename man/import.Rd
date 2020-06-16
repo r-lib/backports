@@ -44,5 +44,5 @@ See examples for a code snippet to copy to your package.
 }
 }
 \seealso{
-\code{\link[base]{.onLoad}}
+\code{\link{.onLoad}}
 }
