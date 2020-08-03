@@ -45,10 +45,21 @@ Do not ignore these kind of warnings for this package.
 Backports for functions which are not in the `base` require additional steps.
 Usually, you need to to import those functions in the package NAMESPACE.
 However, this is only possible if such a function really exists, and yields a warning during `R CMD check` for older versions.
-There are two possibilities to deal with this:
+There are three possibilities to deal with this:
 
-1. Completely import the namespaces instead of selectively importing them, e.g. use `import(utils)` instead of `importFrom(utils, hasName)` in your `NAMESPACPE` file.
+1. Completely import the namespaces instead of selectively importing them, e.g. use `import(utils)` instead of `importFrom(utils, hasName)` in your `NAMESPACE` file.
 2. Force-import the function (see above) so that you always use the backport instead of the implementation shipped with R, even for the most recent version of R.
+3. Use a conditional import in your `NAMESPACE` file, e.g.
+   ```
+   if (getRversion() >= "3.4.0") {
+     importFrom(utils, hasName)
+   } else {
+     importFrom(backports, hasName)
+   }
+   ```
+Note that the braces `{}` are necessary in the
+`NAMESPACE` file, even though they wouldn't be for regular R code, and that you might get a warning
+for including `backports` in the `Imports:` section of your `DESCRIPTION` file if you never end up using it.
 
 
 ## Backports for R versions prior to 3.2.0
