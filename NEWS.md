@@ -1,3 +1,7 @@
+# backports 1.1.9
+* Added backports for `str2lang()` and `str2expression()` (#42)
+  Thanks to @dmurdoch.
+
 # backports 1.1.8
 * Added backport for `tools::vignetteInfo()` for R versions prior to 3.6.0
 * Fixed import of `list2DF()` and `deparse1()`
