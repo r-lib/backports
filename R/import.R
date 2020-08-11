@@ -53,16 +53,22 @@ import = function(pkgname, obj = NULL, force = FALSE) {
 
 get_backports = function(v = getRversion()) {
   v = package_version(v)
-  unlist(tail(FUNS, -(v$minor + 1L)), use.names = FALSE)
+  nn = names(FUNS)
+  for (i in seq_along(FUNS)) {
+    if (v >= nn[i])
+      break
+  }
+  unlist(head(FUNS, i - 1L), use.names = FALSE)
 }
 
 FUNS = list(
-  "3.0.0" = character(),
-  "3.1.0" = character(),
-  "3.2.0" = c("anyNA", "dir.exists", "file.size", "file.mode", "file.mtime", "lengths", "file.info", "URLencode"),
-  "3.3.0" = c("startsWith", "endsWith", "strrep", "trimws", "capture.output"),
-  "3.4.0" = c("hasName"),
-  "3.5.0" = c("...length", "...elt", "isFALSE", "isTRUE"),
+  "4.0.0" = c("R_user_dir", "deparse1", "list2DF"),
   "3.6.0" = c("warningCondition", "errorCondition", "vignetteInfo", "dQuote", "sQuote"),
-  "4.0.0" = c("R_user_dir", "deparse1", "list2DF")
+  "3.5.0" = c("...length", "...elt", "isFALSE", "isTRUE"),
+  "3.4.0" = c("hasName"),
+  "3.3.0" = c("startsWith", "endsWith", "strrep", "trimws", "capture.output"),
+  "3.2.0" = c("anyNA", "dir.exists", "file.size", "file.mode", "file.mtime", "lengths", "file.info", "URLencode"),
+  "3.1.0" = character(),
+  "3.0.0" = character(),
+  "0.0.0" = character()
 )
