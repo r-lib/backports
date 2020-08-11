@@ -1,4 +1,4 @@
-#' @importFrom utils getFromNamespace tail
+#' @importFrom utils getFromNamespace head
 "_PACKAGE"
 
 .onUnload = function (libpath) {
