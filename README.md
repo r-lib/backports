@@ -95,6 +95,8 @@ for including `backports` in the `Imports:` section of your `DESCRIPTION` file i
 * `base::errorCondition()`
 * Argument `q` for `base::dQuote()` and `base::sQuote()`
 * `tools::vignetteInfo()`
+* `base::str2lang()`
+* `base::str2expression()`
 
 ## Backports for R versions prior to 4.0.0
 
