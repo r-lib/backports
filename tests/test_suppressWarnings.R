@@ -1,6 +1,6 @@
 source("helper/helper.R")
 
-if (exists("suppressWarnings", envir = baseenv())) {
+if (getRversion() >= "4.0.0") {
   f = get("suppressWarnings", envir = baseenv())
   expect_same = makeCompareFun(f, backports:::suppressWarnings)
 
