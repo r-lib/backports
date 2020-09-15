@@ -1,3 +1,6 @@
+# backports 1.1.10
+* Added `suppressMessages()` and `suppressWarnings()` with support for argument `classes` for R versions prior to 4.0.0
+
 # backports 1.1.9
 * Added backports for `str2lang()` and `str2expression()` (#42)
   Thanks to @dmurdoch.

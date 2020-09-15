@@ -103,3 +103,4 @@ for including `backports` in the `Imports:` section of your `DESCRIPTION` file i
 * `base::deparse1()`
 * `base::list2DF()`
 * `tools::R_user_dir()`
+* Argument `classes` for `base::suppressWarnings()` and `base::suppressMessages()`
