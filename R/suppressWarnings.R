@@ -34,5 +34,5 @@ tryInvokeRestart = function (r, ...) {
     r <- findRestart(r)
   if (is.null(r))
     invisible(NULL)
-  else .Internal(.invokeRestart(r, list(...)))
+  else invokeRestart(r, ...)
 }
