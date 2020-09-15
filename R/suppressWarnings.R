@@ -27,3 +27,12 @@ suppressMessages = function (expr, classes = "message") {
       tryInvokeRestart("muffleMessage")
   )
 }
+
+
+tryInvokeRestart = function (r, ...) {
+  if (!isRestart(r))
+    r <- findRestart(r)
+  if (is.null(r))
+    invisible(NULL)
+  else .Internal(.invokeRestart(r, list(...)))
+}
