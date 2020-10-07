@@ -8,6 +8,10 @@ expect_true = function(x) {
   stopifnot(isTRUE(x))
 }
 
+expect_false = function(x) {
+  stopifnot(isFALSE(x))
+}
+
 expect_error = function(x, pattern = NULL) {
   ok = try(eval.parent(substitute(x)), silent = TRUE)
   if (!inherits(ok, "try-error"))

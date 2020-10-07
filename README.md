@@ -70,6 +70,7 @@ for including `backports` in the `Imports:` section of your `DESCRIPTION` file i
 * `base::lengths()`
 * Argument `extra_cols` for `base::file.info()`
 * Argument `repeated` for `utils::URLencode`
+* `base::isNamespaceLoaded()`
 
 ## Backports for R versions prior to 3.3.0
 
