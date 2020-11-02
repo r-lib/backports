@@ -21,7 +21,5 @@ NeedsCompilation: yes
 ByteCompile: yes
 Depends:
     R (>= 3.0.0)
-Imports:
-    utils
 Encoding: UTF-8
 RoxygenNote: 7.1.1
