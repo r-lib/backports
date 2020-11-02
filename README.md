@@ -1,7 +1,7 @@
 # backports
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/backports)](http://cran.r-project.org/package=backports)
-[!![R-CMD-check](https://github.com/r-lib/backports/workflows/R-CMD-check/badge.svg)](https://github.com/r-lib/backports/actions)
+[![R-CMD-check](https://github.com/r-lib/backports/workflows/R-CMD-check/badge.svg)](https://github.com/r-lib/backports/actions)
 [![Download Stats](http://cranlogs.r-pkg.org/badges/backports)](https://cran.r-project.org/package=backports)
 
 This package provides backports of functions which have been introduced in one of the base packages in R version 3.0.1 or later.
