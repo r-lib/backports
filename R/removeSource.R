@@ -2,7 +2,7 @@
 #' @rdname removeSource
 #'
 #' @description
-#' See the original description in \code{base::removeSource}.
+#' See the original description in \code{utils::removeSource}.
 #'
 #' @keywords internal
 #' @rawNamespace if (getRversion() < "3.6.0") export(removeSource)
