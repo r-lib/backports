@@ -98,6 +98,7 @@ for including `backports` in the `Imports:` section of your `DESCRIPTION` file i
 * `base::str2lang()`
 * `base::str2expression()`
 * `base::asplit()`
+* `utils::removeSource()` with the capability to strip source from language objects.
 
 ## Backports for R versions prior to 4.0.0
 
