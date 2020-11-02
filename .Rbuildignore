@@ -1,7 +1,6 @@
 ^README.md$
 ^.editorconfig$
-^appveyor\.yml$
-^\.travis\.yml$
+^\.github$
 ^\.ignore$
 ^src/.+\.o$
 ^src/.+\.so$
