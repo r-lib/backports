@@ -20,9 +20,9 @@ get0 = function(x, envir = pos.to.env(-1L), mode = "any", inherits = TRUE, ifnot
   if (!is.character(x) || length(x) == 0L) {
     stop("Invalid first argument")
   }
-  if (length(x) == 1L) {
+  if (length(x) > 1L && getRversion() > "4.1.0") {
     # this check was introduced in R-4.1.0
     stop("first argument has length > 1")
   }
-  mget(x, envir = envir, mode = mode, inherits = inherits, ifnotfound = list(ifnotfound))[[1L]]
+  mget(x[1L], envir = envir, mode = mode, inherits = inherits, ifnotfound = list(ifnotfound))[[1L]]
 }
