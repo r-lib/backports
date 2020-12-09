@@ -1,3 +1,7 @@
+# backports 1.2.1
+
+* Adapted `get0()` to work with R-devel / R-4.1.0 for first argument having length greater than 1.
+
 # backports 1.2.0
 
 * Switched to semantic versioning.
