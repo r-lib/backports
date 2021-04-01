@@ -1,5 +1,11 @@
 source("helper/helper.R")
 
+expect_silent = function(x) {
+  ok = try(eval.parent(substitute(x)), silent = TRUE)
+  if (inherits(ok, "try-error"))
+    stop(deparse(substitute(x)), " threw an error")
+}
+
 f = backports:::stopifnot
 expect_error(f("Test" = 1 == 2), "Test")
 expect_silent(f("Test" = 1 == 1))
