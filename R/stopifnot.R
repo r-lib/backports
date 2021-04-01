@@ -11,7 +11,7 @@
 #' bp_stopifnot = getFromNamespace("stopifnot", "backports")
 #'
 #' m <- matrix(c(1, 3, 12, 1), 2, 2)
-#' bp_stopifnot("m must be symmetric" = m == t(m))
+#' \dontrun{bp_stopifnot("m must be symmetric" = m == t(m))}
 
 stopifnot = function(..., exprs, exprObject, local = TRUE) {
   n <- ...length()

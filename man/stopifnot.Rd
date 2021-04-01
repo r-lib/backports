@@ -15,6 +15,6 @@ See the original description in \code{base::stopifnot}.
 bp_stopifnot = getFromNamespace("stopifnot", "backports")
 
 m <- matrix(c(1, 3, 12, 1), 2, 2)
-bp_stopifnot("m must be symmetric" = m == t(m))
+\dontrun{bp_stopifnot("m must be symmetric" = m == t(m))}
 }
 \keyword{internal}
