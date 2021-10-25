@@ -4,16 +4,21 @@
 \alias{list2DF}
 \title{Backport of list2DF for R < 4.0.0}
 \usage{
-list2DF(x = list(), nrow = NULL)
+list2DF(x = list(), nrow = 0L)
 }
 \description{
 See the original description in \code{base::list2DF}.
+Note that the behaviour of \code{list2DF()} changed in
+R 4.2.0. Instead of recycling vectors to common length, an
+exception is raised.
+This backport implements the new behaviour,
+throwing an error message.
 }
 \examples{
 # get function from namespace instead of possibly getting
 # implementation shipped with recent R versions:
 bp_list2DF = getFromNamespace("list2DF", "backports")
 
-bp_list2DF(list(1:3, 2))
+bp_list2DF(list(x = 1:3, y = 2:4))
 }
 \keyword{internal}

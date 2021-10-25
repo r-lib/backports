@@ -22,4 +22,4 @@ ByteCompile: yes
 Depends:
     R (>= 3.0.0)
 Encoding: UTF-8
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2

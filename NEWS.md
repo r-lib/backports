@@ -1,3 +1,8 @@
+# backports 1.2.2
+
+* Adapted `list2DF()` to new behaviour introduced in r81038: the inputs are not recycled anymore
+  to common length. Instead, an error is thrown.
+
 # backports 1.2.1
 
 * Adapted `get0()` to work with R-devel / R-4.1.0 for first argument having length greater than 1.

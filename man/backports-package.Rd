@@ -6,12 +6,7 @@
 \alias{backports-package}
 \title{backports: Reimplementations of Functions Introduced Since R-3.0.0}
 \description{
-Functions introduced or changed since R v3.0.0 are re-implemented in this
-    package. The backports are conditionally exported in order to let R resolve
-    the function name to either the implemented backport, or the respective base
-    version, if available. Package developers can make use of new functions or
-    arguments by selectively importing specific backports to
-    support older installations.
+Functions introduced or changed since R v3.0.0 are re-implemented in this package. The backports are conditionally exported in order to let R resolve the function name to either the implemented backport, or the respective base version, if available. Package developers can make use of new functions or arguments by selectively importing specific backports to support older installations.
 }
 \seealso{
 Useful links:

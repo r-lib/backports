@@ -7,7 +7,7 @@
 removeSource(fn)
 }
 \description{
-See the original description in \code{base::removeSource}.
+See the original description in \code{utils::removeSource}.
 }
 \examples{
 # get function from namespace instead of possibly getting
