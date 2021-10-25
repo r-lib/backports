@@ -1,5 +1,6 @@
-# backports 1.2.2
+# backports 1.3.0
 
+* Added backport for `stopifnot()` for R versions prior to 4.0.0.
 * Adapted `list2DF()` to new behaviour introduced in r81038: the inputs are not recycled anymore
   to common length. Instead, an error is thrown.
 
