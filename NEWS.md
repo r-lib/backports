@@ -1,6 +1,7 @@
 # backports 1.4.0
 
 * Added `paste()` with support for argument `recycle0` for R versions prior to 4.0.1.
+* Added `paste0()` with support for argument `recycle0` for R versions prior to 4.0.1.
 
 # backports 1.3.0
 

@@ -109,3 +109,4 @@ for including `backports` in the `Imports:` section of your `DESCRIPTION` file i
 
 ## Backports for R versions prior to 4.0.0
 * Argument `recycle0` for `base::paste()`.
+* Argument `recycle0` for `base::paste0()`.
