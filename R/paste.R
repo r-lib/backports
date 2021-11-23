@@ -12,7 +12,7 @@
 #' bp_paste = getFromNamespace("paste", "backports")
 #' bp_paste(letters[1:3], character(), collapse = NULL, recycle0 = TRUE)
 paste <- function(..., sep = " ", collapse = NULL, recycle0 = FALSE) {
-  if(recycle0 && any(vapply(list(...), length, FUN.VALUE = NA_integer_) == 0L)) {
+  if(recycle0 && any(lengths(list(...)) == 0L)) {
     base::paste(sep = sep, collapse = collapse) # for argument checking
 
     if (is.null(collapse)) character() else ""
