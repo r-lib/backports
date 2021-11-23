@@ -13,6 +13,6 @@ See the original description in \code{base::paste0}.
 # get function from namespace instead of possibly getting
 # implementation shipped with recent R versions:
 bp_paste0 = getFromNamespace("paste0", "backports")
-bp_paste0(letters[1:3], collapse = NULL, recycle0 = TRUE)
+bp_paste0(letters[1:3], character(), collapse = NULL, recycle0 = TRUE)
 }
 \keyword{internal}
