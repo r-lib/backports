@@ -6,10 +6,12 @@
 /* .Call calls */
 extern SEXP dotsElt(SEXP, SEXP);
 extern SEXP dotsLength(SEXP);
+extern SEXP dotsNames(SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
     {"dotsElt",    (DL_FUNC) &dotsElt,    2},
     {"dotsLength", (DL_FUNC) &dotsLength, 1},
+    {"dotsNames", (DL_FUNC) &dotsNames, 1},
     {NULL, NULL, 0}
 };
 
