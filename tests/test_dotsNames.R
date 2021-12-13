@@ -12,7 +12,7 @@ if (exists("...names", envir = baseenv()) && getRversion() > "4.1.2") {
   expect_same(1, b = 2)
   expect_same()
 
-  expect_identical(wb(a = 1, 2), c("a", NA_character_))
+  expect_identical(wb(a = 1, 2), c("a", ""))
 }
 
 expect_identical(wb(a = 1, b = 2), c("a", "b"))
