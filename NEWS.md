@@ -1,3 +1,7 @@
+# backports 1.4.1
+
+* Patched `...names()` to match the new implementation in r-devel (svn rev 81283).
+
 # backports 1.4.0
 
 * Added `paste()` with support for argument `recycle0` for R versions prior to 4.0.1.
