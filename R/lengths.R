@@ -13,5 +13,5 @@
 #'
 #' bp_lengths(list(1:3, 2))
 lengths = function(x, use.names = TRUE) {
-  vapply(x, length, FUN.VALUE = NA_integer_, USE.NAMES = use.names)
+  sapply(x, length, USE.NAMES = use.names)
 }
