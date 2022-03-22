@@ -1,3 +1,7 @@
+# backports 1.5.0
+
+* `lengths()` now also works for long vectors (#64, thanks to @HughParsonage)
+
 # backports 1.4.1
 
 * Patched `...names()` to match the new implementation in r-devel (svn rev 81283).
