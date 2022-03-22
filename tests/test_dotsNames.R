@@ -16,3 +16,25 @@ if (exists("...names", envir = baseenv()) && getRversion() > "4.1.2") {
 }
 
 expect_identical(wb(a = 1, b = 2), c("a", "b"))
+
+
+# issue 64
+bp_...names = getFromNamespace("...names", "backports")
+
+test1 <- function(...) {
+  ...names()
+}
+
+test2 <- function(...) {
+  bp_...names()
+}
+
+expect_identical(
+  test1("ABC"),
+  test2("ABC")
+)
+
+expect_identical(
+  test1(a = "b", ),
+  test2(a = "b", )
+)
