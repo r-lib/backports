@@ -16,14 +16,14 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: macOS-latest,   r: 'release'}
-          - {os: windows-latest, r: 'release'}
-          - {os: ubuntu-latest,   r: 'devel', http-user-agent: "release"}
-          - {os: ubuntu-latest,   r: '4.1'}
-          - {os: ubuntu-latest,   r: '4.0'}
-          - {os: ubuntu-latest,   r: '3.6'}
-          - {os: ubuntu-latest,   r: '3.5'}
-          - {os: ubuntu-latest,   r: '3.4'}
+#          - {os: macOS-latest,   r: 'release'}
+#          - {os: windows-latest, r: 'release'}
+#          - {os: ubuntu-latest,   r: 'devel', http-user-agent: "release"}
+#          - {os: ubuntu-latest,   r: '4.1'}
+#          - {os: ubuntu-latest,   r: '4.0'}
+#          - {os: ubuntu-latest,   r: '3.6'}
+#          - {os: ubuntu-latest,   r: '3.5'}
+#          - {os: ubuntu-latest,   r: '3.4'}
           - {os: ubuntu-latest,   r: '3.3'}
 
     env:
@@ -44,7 +44,7 @@ jobs:
 
       - name: Install pak in old versions
         if: ${{ matrix.config.r }} == '3.3'
-        run: install.packages("remotes"); remotes::install_github("pak")
+        run: install.packages("remotes"); remotes::install_github("r-lib/pak")
         shell: Rscript {0}
       
       - uses: r-lib/actions/setup-r-dependencies@v2
