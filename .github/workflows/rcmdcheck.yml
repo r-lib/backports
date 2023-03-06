@@ -42,6 +42,11 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
+      - name: Install pak in old versions
+        if: matrix.r == '3.3'
+        run: install.packages("remotes"); remotes:install_github("pak")
+        shell: Rscript {0}
+      
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
