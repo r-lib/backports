@@ -44,7 +44,7 @@ jobs:
 
       - name: Install pak in old versions
         if: ${{ matrix.config.r }} == '3.3'
-        run: install.packages("remotes"); remotes:install_github("pak")
+        run: install.packages("remotes"); remotes::install_github("pak")
         shell: Rscript {0}
       
       - uses: r-lib/actions/setup-r-dependencies@v2
