@@ -43,7 +43,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install pak in old versions
-        if: matrix.r == '3.3'
+        if: ${{ matrix.config.r }} == '3.3'
         run: install.packages("remotes"); remotes:install_github("pak")
         shell: Rscript {0}
       
