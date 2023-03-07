@@ -45,7 +45,9 @@ jobs:
 
       - name: Install pak in old versions
         if: ${{ matrix.config.r }} == '3.3'
-        run: install.packages("pak", type = "source", lib = Sys.getenv("R_LIB_FOR_PAK"))
+        run: |
+          dir.create(Sys.getenv("R_LIB_FOR_PAK"), showWarnings = FALSE, recursive = TRUE)
+          install.packages("pak", type = "source", lib = Sys.getenv("R_LIB_FOR_PAK"))
         shell: Rscript {0}
       
       - uses: r-lib/actions/setup-r-dependencies@v2
