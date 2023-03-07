@@ -3,5 +3,5 @@
 
 .onUnload = function (libpath) {
   library.dynam.unload("backports", libpath)
-  .libPaths(base::.libPaths())
+  environment(.libPaths) <- environment(base::.libPaths)
 }
