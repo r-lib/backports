@@ -59,7 +59,7 @@ jobs:
         if: matrix.config.r <= '3.3'
         run: |
           R CMD build .
-          R CMD check *.tar.gz
+          R CMD check --no-manual *.tar.gz
           
       - uses: r-lib/actions/check-r-package@v2
         if: matrix.config.r > '3.3'
