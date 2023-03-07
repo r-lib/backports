@@ -42,16 +42,15 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
-      - name: Install pak in old versions
-        env: 
-          R_LIB_FOR_PAK: ${{ env.R_LIBS_USER  }}
-        if: ${{ matrix.config.r }} == '3.3'
+      - name: Install in 3.3
+        if: ${{ matrix.config.r }} <= '3.3'
         run: |
-          dir.create(Sys.getenv("R_LIB_FOR_PAK"), showWarnings = FALSE, recursive = TRUE)
-          install.packages("pak", type = "source", lib = Sys.getenv("R_LIB_FOR_PAK"))
+          install.packages("remotes")
+          remotes::install_local(".", dependencies = TRUE)
         shell: Rscript {0}
       
       - uses: r-lib/actions/setup-r-dependencies@v2
+        if: ${{ matrix.config.r }} > '3.3'
         with:
           extra-packages: any::rcmdcheck
           needs: check
