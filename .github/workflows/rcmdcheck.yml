@@ -45,7 +45,7 @@ jobs:
       - name: Install in 3.3
         if: matrix.config.r <= '3.3'
         run: |
-          install.packages(c("remotes", "rcmdcheck"))
+          install.packages("remotes")
           remotes::install_local(".", dependencies = TRUE)
         shell: Rscript {0}
       
@@ -55,6 +55,13 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
+      - name: Check in 3.3
+        if: matrix.config.r <= '3.3'
+        run: |
+          R CMD build .
+          R CMD check *.tar.gz
+          
       - uses: r-lib/actions/check-r-package@v2
+        if: matrix.config.r > '3.3'
         with:
           upload-snapshots: true
