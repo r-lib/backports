@@ -24,7 +24,10 @@ jobs:
 #          - {os: ubuntu-latest,   r: '3.6'}
 #          - {os: ubuntu-latest,   r: '3.5'}
 #          - {os: ubuntu-latest,   r: '3.4'}
-          - {os: ubuntu-latest,   r: '3.3'}
+#          - {os: ubuntu-latest,   r: '3.3'}
+          - {os: ubuntu-latest,   r: '3.2'}
+          - {os: ubuntu-latest,   r: '3.1'}
+          - {os: ubuntu-latest,   r: '3.0'}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -42,7 +45,7 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: matrix.config.r > '3.3'
 
-      - name: Install in 3.3
+      - name: Install in old versions
         if: matrix.config.r <= '3.3'
         run: |
           install.packages("remotes")
@@ -55,7 +58,7 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
-      - name: Check in 3.3
+      - name: Check in old versions
         if: matrix.config.r <= '3.3'
         run: |
           R CMD build .
