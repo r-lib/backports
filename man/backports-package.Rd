@@ -21,7 +21,6 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Duncan Murdoch \email{murdoch.duncan@gmail.com}
   \item R Core Team
 }
 

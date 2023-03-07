@@ -113,10 +113,3 @@ for including `backports` in the `Imports:` section of your `DESCRIPTION` file i
 
 ## Backports for R versions prior to 4.1.0
 * `base::...names()`
-
-## Backports for R versions prior to 4.3.0
-* `tools:::print.Rconcordance`
-* `tools:::as.character.Rconcordance`
-* `tools::as.Rconcordance`
-* `tools:::as.Rconcordance.default`
-* `tools::matchConcordance`
