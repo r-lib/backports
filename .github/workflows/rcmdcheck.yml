@@ -43,18 +43,20 @@ jobs:
           use-public-rspm: true
 
       - name: Install pak in old versions
+        env: 
+          R_LIB_FOR_PAK: ${{ env.R_LIBS_USER  }}
         if: ${{ matrix.config.r }} == '3.3'
         run: |
           dir.create(Sys.getenv("R_LIB_FOR_PAK"), showWarnings = FALSE, recursive = TRUE)
           install.packages("pak", type = "source", lib = Sys.getenv("R_LIB_FOR_PAK"))
         shell: Rscript {0}
-        env: 
-          R_LIB_FOR_PAK: $R_LIBS_USER 
       
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
           needs: check
+        env: 
+          R_LIB_FOR_PAK: ${{ env.R_LIBS_USER  }}          
 
       - uses: r-lib/actions/check-r-package@v2
         with:
