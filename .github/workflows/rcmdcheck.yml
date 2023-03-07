@@ -43,14 +43,14 @@ jobs:
           use-public-rspm: true
 
       - name: Install in 3.3
-        if: ${{ matrix.config.r }} <= '3.3'
+        if: matrix.config.r <= '3.3'
         run: |
           install.packages("remotes")
           remotes::install_local(".", dependencies = TRUE)
         shell: Rscript {0}
       
       - uses: r-lib/actions/setup-r-dependencies@v2
-        if: ${{ matrix.config.r }} > '3.3'
+        if: matrix.config.r > '3.3'
         with:
           extra-packages: any::rcmdcheck
           needs: check
