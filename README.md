@@ -113,3 +113,4 @@ for including `backports` in the `Imports:` section of your `DESCRIPTION` file i
 
 ## Backports for R versions prior to 4.1.0
 * `base::...names()`
+* `base::.libPaths()`
