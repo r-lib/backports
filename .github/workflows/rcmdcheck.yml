@@ -25,6 +25,10 @@ jobs:
           - {os: ubuntu-latest,   r: '3.5'}
           - {os: ubuntu-latest,   r: '3.4'}
           - {os: ubuntu-latest,   r: '3.3'}
+          - {os: ubuntu-latest,   r: '3.2'}
+# The remotes package is not available before 3.2
+#          - {os: ubuntu-latest,   r: '3.1'}
+#          - {os: ubuntu-latest,   r: '3.0'}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -40,13 +44,28 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
-          use-public-rspm: true
+          use-public-rspm: matrix.config.r > '3.3'
 
+      - name: Install in old versions
+        if: matrix.config.r <= '3.3'
+        run: |
+          install.packages("remotes")
+          remotes::install_local(".", dependencies = TRUE)
+        shell: Rscript {0}
+      
       - uses: r-lib/actions/setup-r-dependencies@v2
+        if: matrix.config.r > '3.3'
         with:
           extra-packages: any::rcmdcheck
           needs: check
 
+      - name: Check in old versions
+        if: matrix.config.r <= '3.3'
+        run: |
+          R CMD build .
+          R CMD check --no-manual *.tar.gz
+          
       - uses: r-lib/actions/check-r-package@v2
+        if: matrix.config.r > '3.3'
         with:
           upload-snapshots: true
