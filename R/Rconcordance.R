@@ -120,11 +120,50 @@ as.Rconcordance.default <- function(x, ...) {
     result
 }
 
+# Windows paths may include colons in the filenames
+# if drive letters are used.  This looks for drive letters that
+# have been split from the rest of the path and reattaches
+# them.
+
+fixWindowsConcordancePaths <- function(split) {
+    if (length(split) <= 4)
+        return(split)
+    # We are looking for a drive letter which should have been at the start
+    # of the 2nd or 3rd entry, but will be in an entry by itself
+    
+    driveletter <- grep("^[a-zA-Z]$", split[2:4]) + 1
+    ofs <- grep("^ofs [[:digit:]]+$", split[4:length(split)]) + 3
+    
+    # The drive letter can't precede the offset record
+    driveletter <- setdiff(driveletter, ofs - 1)
+    
+    if (!length(driveletter))
+        return(split)
+    
+    if (!length(ofs) # no ofs record but length is 5 or more
+        || length(split) >= 6) {
+        if (2 %in% driveletter) {
+            split <- c(split[1],
+                       paste(split[2], split[3], sep=":"),
+                       split[4:length(split)])
+            driveletter <- driveletter - 1
+        }
+        if (3 %in% driveletter) {
+            split <- c(split[1:2],
+                       paste(split[3], split[4], sep=":"),
+                       split[5:length(split)])
+        }
+    }
+    split
+}
+
 # This takes one concordance string and produces a single concordance
 # object
 
 stringToConcordance <- function(s) {
     split <- strsplit(s, ":")[[1]]
+    if (.Platform$OS.type == "windows")
+        split <- fixWindowsConcordancePaths(split)
     targetfile <- split[2]
     srcFile <- split[3]
     if (length(split) == 4) {
@@ -158,14 +197,19 @@ addConcordance <- function(conc, s) {
     conc
 }
 
-# This modifies an existing concordance by following links specified
-# in a previous one.
+#' @title Backport of followConcordance for R < 4.3.0
+#'
+#' @description
+#' See the original description in \code{tools::followConcordance}.
+#'
+#' @keywords internal
+#' @rawNamespace if (getRversion() < "4.3.0") S3method("print", "Rconcordance")
 
-followConcordance <- function(conc, prevConcordance) {
+followConcordance <- function(concordance, prevConcordance) {
     if (!is.null(prevConcordance)) {
-    	curLines <- conc$srcLine
-    	curFile <- rep_len(conc$srcFile, length(curLines))
-    	curOfs <- conc$offset
+        curLines <- concordance$srcLine
+        curFile <- rep_len(concordance$srcFile, length(curLines))
+        curOfs <- concordance$offset
     	
     	prevLines <- prevConcordance$srcLine
     	prevFile <- rep_len(prevConcordance$srcFile, length(prevLines))
@@ -184,12 +228,12 @@ followConcordance <- function(conc, prevConcordance) {
 	}
 	new <- is.na(prevLines[curLines])
 		
-	conc$srcFile <- ifelse(new, curFile,
+        concordance$srcFile <- ifelse(new, curFile,
 			       prevFile[curLines])
-	conc$srcLine <- ifelse(new, curLines,
+        concordance$srcLine <- ifelse(new, curLines,
 				prevLines[curLines])
     }
-    conc
+    concordance
 }
 
 #' @title Backport of matchConcordance for R < 4.3.0
