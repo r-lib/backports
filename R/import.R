@@ -63,14 +63,14 @@ get_backports = function(v = getRversion()) {
 
 FUNS = list(
   "4.3.0" = c("as.Rconcordance", "matchConcordance"),
-  "4.1.0" = c("...names"),
+  "4.1.0" = c("...names", ".libPaths"),
   "4.0.1" = c("paste", "paste0"),
   "4.0.0" = c("R_user_dir", "deparse1", "list2DF", "suppressWarnings", "suppressMessages", "stopifnot"),
-  "3.6.0" = c("warningCondition", "errorCondition", "vignetteInfo", "dQuote", "sQuote", "removeSource", "asplit"),
+  "3.6.0" = c("warningCondition", "errorCondition", "vignetteInfo", "dQuote", "sQuote", "removeSource", "asplit", "str2lang", "str2expression"),
   "3.5.0" = c("...length", "...elt", "isFALSE", "isTRUE"),
-  "3.4.0" = c("hasName"),
-  "3.3.0" = c("startsWith", "endsWith", "strrep", "trimws", "capture.output"),
-  "3.2.0" = c("anyNA", "dir.exists", "file.size", "file.mode", "file.mtime", "lengths", "file.info", "URLencode", "isNamespaceLoaded"),
+  "3.4.0" = c("hasName", ".valid.factor"),
+  "3.3.0" = c("startsWith", "endsWith", "strrep", "capture.output"),
+  "3.2.0" = c("anyNA", "dir.exists", "file.size", "file.mode", "file.mtime", "lengths", "file.info", "URLencode", "isNamespaceLoaded", "trimws"),
   "3.1.0" = character(),
   "3.0.0" = character(),
   "0.0.0" = character()
