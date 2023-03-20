@@ -203,7 +203,7 @@ addConcordance <- function(conc, s) {
 #' See the original description in \code{tools::followConcordance}.
 #'
 #' @keywords internal
-#' @rawNamespace if (getRversion() < "4.3.0") export(followConcordance))
+#' @rawNamespace if (getRversion() < "4.3.0") export(followConcordance)
 
 followConcordance <- function(concordance, prevConcordance) {
     if (!is.null(prevConcordance)) {
