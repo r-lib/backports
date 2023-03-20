@@ -220,18 +220,18 @@ followConcordance <- function(concordance, prevConcordance) {
     	  prevFile <- c(rep(NA_character_, prevOfs), prevFile)
     	  prevOfs <- 0
     	}
-	n0 <- max(curLines)
-	n1 <- length(prevLines)
-	if (n1 < n0) {
-	    prevLines <- c(prevLines, rep(NA_integer_, n0 - n1))
-	    prevFile <- c(prevFile, rep(NA_character_, n0 - n1))
-	}
-	new <- is.na(prevLines[curLines])
+	    n0 <- max(curLines)
+	    n1 <- length(prevLines)
+	    if (n1 < n0) {
+	        prevLines <- c(prevLines, rep(NA_integer_, n0 - n1))
+	        prevFile <- c(prevFile, rep(NA_character_, n0 - n1))
+	    }
+	    new <- is.na(prevLines[curLines])
 		
-        concordance$srcFile <- ifelse(new, curFile,
+      concordance$srcFile <- ifelse(new, curFile,
 			       prevFile[curLines])
-        concordance$srcLine <- ifelse(new, curLines,
-				prevLines[curLines])
+      concordance$srcLine <- ifelse(new, curLines,
+		  prevLines[curLines])
     }
     concordance
 }
