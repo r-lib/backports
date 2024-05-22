@@ -1,5 +1,6 @@
 #' @title Backport of the null-coalescing operator for R < 4.4.0
-#' @rdname null_coalesce
+#' @name null_coalesce_operator
+#' @rdname null_coalesce_operator
 #'
 #' @usage x \%||\% y
 #'
