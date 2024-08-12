@@ -19,6 +19,7 @@ jobs:
           - {os: macOS-latest,   r: 'release'}
           - {os: windows-latest, r: 'release'}
           - {os: ubuntu-latest,   r: 'devel', http-user-agent: "release"}
+          - {os: ubuntu-latest,   r: '4.3'}
           - {os: ubuntu-latest,   r: '4.1'}
           - {os: ubuntu-latest,   r: '4.0'}
           - {os: ubuntu-latest,   r: '3.6'}
@@ -52,7 +53,7 @@ jobs:
           install.packages("remotes")
           remotes::install_local(".", dependencies = TRUE)
         shell: Rscript {0}
-      
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         if: matrix.config.r > '3.3'
         with:
@@ -64,7 +65,7 @@ jobs:
         run: |
           R CMD build .
           R CMD check --no-manual *.tar.gz
-          
+
       - uses: r-lib/actions/check-r-package@v2
         if: matrix.config.r > '3.3'
         with:

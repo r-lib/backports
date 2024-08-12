@@ -1,5 +1,6 @@
 # backports 1.5.0
 
+* Added backport for the null-coalesce operator `%||%` for R versions prior to 4.4.0.
 * `lengths()` now also works for long vectors (#64, thanks to @HughParsonage)
 
 # backports 1.4.1

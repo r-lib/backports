@@ -62,6 +62,7 @@ get_backports = function(v = getRversion()) {
 }
 
 FUNS = list(
+  "4.4.0" = "%||%",
   "4.3.0" = c("as.Rconcordance", "matchConcordance"),
   "4.1.0" = c("...names", ".libPaths"),
   "4.0.1" = c("paste", "paste0"),
