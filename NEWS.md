@@ -1,3 +1,7 @@
+# backports (development version)
+
+* Added backport for the `grepv()` function from base for R versions prior to 4.5.0
+
 # backports 1.5.0
 
 * Added backport for the null-coalesce operator `%||%` for R versions prior to 4.4.0.

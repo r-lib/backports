@@ -60,6 +60,9 @@ Note that the braces `{}` are necessary in the
 `NAMESPACE` file, even though they wouldn't be for regular R code, and that you might get a warning
 for including `backports` in the `Imports:` section of your `DESCRIPTION` file if you never end up using it.
 
+## Backports for R versions prior to 4.5.0
+
+* `base::grepv()`
 
 ## Backports for R versions prior to 3.2.0
 
