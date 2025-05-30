@@ -45,17 +45,17 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
-          use-public-rspm: matrix.config.r > '3.4'
+          use-public-rspm: matrix.config.r > '3.5'
 
       - name: Install in old versions
-        if: matrix.config.r <= '3.4'
+        if: matrix.config.r <= '3.5'
         run: |
           install.packages("remotes")
           remotes::install_local(".", dependencies = TRUE)
         shell: Rscript {0}
 
       - uses: r-lib/actions/setup-r-dependencies@v2
-        if: matrix.config.r > '3.4'
+        if: matrix.config.r > '3.5'
         with:
           extra-packages: any::rcmdcheck
           needs: check
