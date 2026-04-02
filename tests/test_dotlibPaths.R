@@ -15,4 +15,4 @@ if (getRversion() >= "4.1.0") {
   .libPaths(f, include.site = FALSE)
   expect_same()
 }
-.libPaths(save, include.site = length(.Library.site) && .Library.site %in% save)
+.libPaths(save, include.site = length(.Library.site) && any(.Library.site %in% save))
