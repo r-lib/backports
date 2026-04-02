@@ -7,12 +7,11 @@ SEXP dotsLength(SEXP env_) {
         if (!R_DotsExist(env_)) {
             error("incorrect context: the current call has no '...' to look in");
         }
-        return R_DotsLength(env_);
+        return ScalarInteger(R_DotsLength(env_));
     #else
         SEXP ddd = findVar(R_DotsSymbol, env_);
         if (ddd == R_UnboundValue)
             error("incorrect context: the current call has no '...' to look in");
+        return ScalarInteger(TYPEOF(ddd) == DOTSXP ? length(ddd) : 0);
     #endif
-
-    return ScalarInteger(TYPEOF(ddd) == DOTSXP ? length(ddd) : 0);
 }
