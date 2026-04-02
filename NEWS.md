@@ -1,3 +1,7 @@
+# backports 1.5.1
+
+* Removed calls to deprecated C API functions for R 4.6.0.
+
 # backports 1.5.0
 
 * Added backport for the null-coalesce operator `%||%` for R versions prior to 4.4.0.
