@@ -1,3 +1,7 @@
+# backports (development version)
+
+* Added backport for `nullfile()` for R versions prior to 3.6.0.
+
 # backports 1.5.1
 
 * Removed calls to deprecated C API functions for R 4.6.0.
